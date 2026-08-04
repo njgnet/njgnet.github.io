@@ -1,41 +1,9 @@
-const data = window.PORTFOLIO || { profile: {}, projects: [], awards: [], skills: [] };
-const $ = (selector) => document.querySelector(selector);
-
-function text(selector, value, fallback) {
-  $(selector).textContent = value || fallback;
-}
-
-text("#profile-name", data.profile.name, "포트폴리오");
-text("#profile-headline", data.profile.headline, "소개 문장을 입력해주세요.");
-text("#profile-intro", data.profile.intro, "웹사이트 기본 틀입니다.");
-text("#about-content", data.profile.about, "소개 내용이 아직 등록되지 않았습니다.");
-
-function renderEmpty(container, message) {
-  container.innerHTML = `<article class="empty-panel">${message}</article>`;
-}
-
-function renderProjects() {
-  const container = $("#project-list");
-  if (!data.projects.length) return renderEmpty(container, "등록된 프로젝트가 없습니다.");
-  container.innerHTML = data.projects.map((item, index) => `
-    <article class="card">
-      <div class="card-meta"><span>PROJECT ${String(index + 1).padStart(2, "0")}</span><time>${item.period || ""}</time></div>
-      <h3>${item.title}</h3><p>${item.summary || ""}</p>
-      <div class="tags">${(item.skills || []).map(skill => `<span>${skill}</span>`).join("")}</div>
-      ${(item.details || []).length ? `<details><summary>담당 업무와 결과 보기</summary><ul>${item.details.map(line => `<li>${line}</li>`).join("")}</ul></details>` : ""}
-    </article>`).join("");
-}
-
-function renderAwards() {
-  const container = $("#award-list");
-  if (!data.awards.length) return renderEmpty(container, "등록된 수상 내역이 없습니다.");
-  container.innerHTML = data.awards.map(item => `<article class="card"><div class="card-meta"><span>AWARD</span><time>${item.date || ""}</time></div><h3>${item.title}</h3><p>${item.description || ""}</p></article>`).join("");
-}
-
-function renderSkills() {
-  const container = $("#skill-list");
-  if (!data.skills.length) return renderEmpty(container, "등록된 기술이 없습니다.");
-  container.innerHTML = data.skills.map(skill => `<span>${skill}</span>`).join("");
-}
-
-renderProjects(); renderAwards(); renderSkills();
+const data=window.PORTFOLIO||{projects:[],awards:[],skills:[]};
+const esc=value=>String(value??"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const empty=(node,label)=>{node.innerHTML=`<div class="empty"><span>EMPTY</span><h2>${label}</h2><p>자료를 추가하면 이 페이지에 자동으로 표시됩니다.</p></div>`};
+const projects=document.querySelector("#project-list");
+if(projects){if(!data.projects.length)empty(projects,"등록된 프로젝트가 없습니다.");else projects.innerHTML=data.projects.map((p,i)=>`<article class="record"><div class="record-no">${String(i+1).padStart(2,"0")}</div><div class="record-main"><div class="record-meta"><span>PROJECT</span><time>${esc(p.period)}</time></div><h2>${esc(p.title)}</h2><p>${esc(p.summary)}</p><div class="chips">${(p.skills||[]).map(x=>`<span>${esc(x)}</span>`).join("")}</div>${(p.details||[]).length?`<details><summary>담당 업무와 결과</summary><ul>${p.details.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></details>`:""}</div></article>`).join("")}
+const awards=document.querySelector("#award-list");
+if(awards){if(!data.awards.length)empty(awards,"등록된 수상 내역이 없습니다.");else awards.innerHTML=data.awards.map((a,i)=>`<article class="record"><div class="record-no">${String(i+1).padStart(2,"0")}</div><div class="record-main"><div class="record-meta"><span>AWARD</span><time>${esc(a.date)}</time></div><h2>${esc(a.title)}</h2><p>${esc(a.description)}</p></div></article>`).join("")}
+const skills=document.querySelector("#skill-list");
+if(skills){if(!data.skills.length)empty(skills,"등록된 기술이 없습니다.");else skills.innerHTML=data.skills.map((s,i)=>`<article><span>${String(i+1).padStart(2,"0")}</span><strong>${esc(s)}</strong></article>`).join("")}

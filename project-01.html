@@ -20,9 +20,9 @@
 
     <section class="project-hero project-cover">
       <div class="cover-copy">
-        <p class="kicker">01 TEAM PROJECT · SIMMIT PAY</p>
-        <h1>필요한 통신만<br>통과시키는<br><span>금융 네트워크</span></h1>
-        <p class="hero-summary">본사·지사·재택근무 환경을 하나로 연결하고, 부서와 업무에 따라 접근 범위를 다르게 적용했습니다. 그중 ACL 정책 설정과 통신 테스트를 중심으로 맡았습니다.</p>
+        <p class="kicker">1차 팀 프로젝트 · CISCO PACKET TRACER</p>
+        <h1>SIMMIT PAY<br><span>네트워크 구축 과정</span></h1>
+        <p class="hero-summary">본사와 지사 네트워크를 먼저 연결하고 VLAN과 라우팅이 정상인지 확인한 뒤 ACL을 적용했습니다. 이후 VPN과 Dynamic NAT까지 합쳐 전체 통신을 점검했습니다. 저는 토폴로지 구축과 네트워크 시연 영상을 맡았고, ACL 설정과 테스트에 가장 많은 시간을 썼습니다.</p>
         <p class="official-title"><b>프로젝트명</b> 금융 플랫폼 기반 통합 인프라 및 보안 네트워크 구축</p>
         <div class="cover-actions">
           <a href="#project-overview">프로젝트 개요 ↓</a>
@@ -54,15 +54,16 @@
     <section class="project-intro section-block" id="project-overview">
       <p class="section-no">01 / OVERVIEW</p>
       <div>
-        <h2>금융 서비스 운영에 필요한 네트워크와<br>보안 환경을 한 번에 구성한 프로젝트입니다.</h2>
-        <p>SIMMIT PAY는 회원가입, 로그인, 계좌 생성과 송금 기능을 제공하는 가상의 금융 플랫폼입니다. 서비스 운영을 위해 WEB·DB·DNS·FTP·LOG 서버를 역할별로 나누고, 본사와 지사, 재택근무자가 필요한 서비스에 접속할 수 있도록 전체 인프라를 구성했습니다.</p>
-        <p>금융 정보를 다루는 환경인 만큼 통신만 되게 만드는 것으로 끝내지 않았습니다. VLAN으로 부서를 분리하고 ACL과 방화벽으로 접근 범위를 제한했습니다. 본사와 지사는 VPN으로 연결하고 Dynamic NAT를 적용했으며, 서버에서 발생한 로그는 중앙 로그 서버로 모으도록 구성했습니다.</p>
+        <h2>프로젝트에서 만든 환경</h2>
+        <p>팀에서 정한 가상 회사는 SIMMIT PAY입니다. 회원가입과 로그인, 계좌 생성, 송금 기능이 있는 금융 웹 서비스를 운영한다는 설정으로 시작했습니다. 본사에는 인사·개발·영업·재무·보안 부서와 서버망을 두었고, 지사에는 인사·영업 부서와 별도 서버망을 구성했습니다. 본사 영업팀 직원이 외부에서 접속하는 재택근무 환경도 포함했습니다.</p>
+        <p>서버 쪽은 Rocky Linux를 기반으로 WEB, DB, DNS, FTP, LOG 서버를 분리했습니다. 서버 구축 자체는 다른 팀원이 맡았고, 저는 Packet Tracer에서 각 부서와 서버가 연결되는 네트워크를 구성했습니다. 서버가 만들어진 뒤에는 필요한 포트와 접근 대상이 네트워크 정책과 맞는지 함께 확인했습니다.</p>
+        <p>전체 구성에는 VLAN, OSPF Routing, ACL, VPN, Dynamic NAT가 들어갔습니다. 이 중 VPN과 Dynamic NAT는 팀원과 같이 작업했으며, 제가 주로 맡았다고 보기 어려워 포트폴리오에서는 협업 항목으로 구분했습니다.</p>
         <div class="simmit-scope">
           <article><small>SERVICE</small><b>금융 웹 서비스</b><span>회원·계좌·송금 기능과 DB 연동</span></article>
           <article><small>INFRASTRUCTURE</small><b>분리된 서버 환경</b><span>WEB · DB · DNS · FTP · LOG</span></article>
           <article><small>SECURITY</small><b>다계층 접근 통제</b><span>VLAN · ACL · VPN · 방화벽</span></article>
         </div>
-        <div class="my-focus-note"><small>MY FOCUS</small><p>저는 Packet Tracer에서 전체 네트워크 토폴로지를 구축하고 VLAN과 Routing 설정에 참여했습니다. 그중 가장 많은 시간을 들인 작업은 <strong>ACL 정책을 장비에 적용하고, 허용해야 할 통신과 차단해야 할 통신이 기준대로 동작할 때까지 계속 테스트한 것</strong>입니다.</p></div>
+        <div class="my-focus-note"><small>제가 중점적으로 한 일</small><p>전체 토폴로지를 만들고 VLAN과 Routing 설정에 참여했습니다. 그중 제가 확실하게 설명할 수 있는 부분은 ACL입니다. 본사와 지사의 접근 기준을 정리하고 장비에 직접 적용했습니다. 한 규칙을 바꿀 때마다 허용되어야 하는 통신과 막혀야 하는 통신을 다시 확인했고, 마지막에는 본사와 지사 시연 영상도 직접 만들었습니다.</p></div>
       </div>
     </section>
 
@@ -83,7 +84,7 @@
     <section class="section-block ownership-section">
       <p class="section-no">03 / MY ROLE</p>
       <div>
-        <h2>기여도를 정확하게 구분했습니다.</h2>
+        <h2>제가 맡은 부분과 같이 작업한 부분</h2>
         <div class="ownership-grid">
           <article class="primary-role"><small>핵심 담당</small><h3>ACL 정책·검증</h3><ul><li>본사·지사 접근 기준 정리</li><li>ACL 규칙과 적용 방향 설정</li><li>허용·차단 시나리오 반복 테스트</li><li>본사·지사 시연 영상 제작</li></ul></article>
           <article><small>구축 참여</small><h3>VLAN·Routing</h3><p>Packet Tracer에서 부서별 네트워크와 구간 연결을 구성하고 전체 통신 흐름을 확인했습니다.</p></article>
@@ -115,15 +116,15 @@
           <div><b>본사 보안팀</b><span>본사·지사 관리 통신</span><p>관리와 장애 확인을 위한 예외 권한</p></div>
           <div><b>기타 트래픽</b><span>DENY</span><p>정의되지 않은 접근은 기본 차단</p></div>
         </div>
-        <blockquote>ACL은 규칙 하나의 순서나 적용 방향이 틀려도 필요한 통신까지 차단될 수 있었습니다. 기준표를 출발지·목적지·서비스 단위로 나누고, 한 경로씩 검증하며 문제를 좁혔습니다.</blockquote>
+        <blockquote>가장 애먹었던 부분은 ACL이었습니다. 규칙 하나가 틀리거나 순서가 맞지 않으면 원래 되어야 할 통신까지 한꺼번에 막혔습니다. 그래서 본사와 지사의 허용 기준을 따로 적어 두고, 출발지와 목적지, 서비스 종류를 하나씩 바꿔 가며 확인했습니다.</blockquote>
       </div>
     </section>
 
     <section class="evidence-section reverse">
       <div class="evidence-copy">
         <p class="section-no">06 / TROUBLESHOOTING</p>
-        <h2>“연결된다”가 아니라<br>“정책대로 연결된다”를 확인</h2>
-        <p>통신 실패가 발생하면 라우팅 문제인지 ACL 문제인지 먼저 구분했습니다. 이후 출발지·목적지 주소, 인터페이스 방향, 규칙 순서와 서비스 포트를 차례로 대조했습니다.</p>
+        <h2>ACL에서 막힌 부분을 확인한 방법</h2>
+        <p>처음에는 통신이 안 될 때마다 ACL부터 고쳤는데, 오히려 원인을 찾기가 더 어려워졌습니다. 이후에는 ACL을 제외한 상태에서 라우팅이 되는지 먼저 확인했습니다. 기본 통신이 되면 ACL의 적용 인터페이스와 방향, 규칙 순서, IP 주소와 포트를 차례대로 봤습니다.</p>
         <ul class="check-list"><li>필요한 서비스의 정상 연결 확인</li><li>비인가 부서와 외부 접근 차단 확인</li><li>본사·지사·재택근무 시나리오별 재시험</li><li>성공과 실패 결과를 시연 영상으로 기록</li></ul>
       </div>
       <figure><img src="assets/images/project-01/acl-test.png" alt="ACL 정책 적용 후 통신 테스트 화면"><figcaption>ACL 정책 적용 후 허용·차단 통신 검증</figcaption></figure>
@@ -136,7 +137,7 @@
     </section>
 
     <section class="section-block troubleshooting-detail">
-      <p class="section-no">08 / ITERATION</p><div><h2>규칙 하나를 바꿀 때마다 해당 경로부터 다시 확인했습니다.</h2><p>ACL은 위에서부터 순서대로 평가되므로 넓은 차단 규칙이 앞에 있거나 적용 방향을 잘못 지정하면 이후 허용 규칙이 있어도 통신이 실패했습니다. 설정을 무작정 바꾸지 않고 다음 순서로 원인을 좁혔습니다.</p>
+      <p class="section-no">08 / ITERATION</p><div><h2>설정을 바꾼 뒤에는 처음부터 다시 테스트했습니다.</h2><p>ACL은 위에서부터 순서대로 적용됩니다. 앞쪽에 넓은 차단 규칙이 있으면 뒤에 허용 규칙을 넣어도 통신이 되지 않았습니다. 적용 방향을 반대로 넣어 같은 문제가 생긴 적도 있었습니다. 이후부터는 아래 순서를 정해 놓고 확인했습니다.</p>
         <ol class="debug-steps"><li><b>기본 연결성 확인</b><span>ACL을 제외했을 때 라우팅과 인터페이스가 정상인지 확인</span></li><li><b>적용 위치 확인</b><span>어느 인터페이스의 inbound/outbound에 적용되었는지 확인</span></li><li><b>규칙 순서 확인</b><span>필요한 permit보다 넓은 deny가 먼저 평가되는지 점검</span></li><li><b>서비스 단위 확인</b><span>Ping, WEB, FTP, DNS, DB, LOG를 개별 시험</span></li><li><b>반대 조건 확인</b><span>허용 대상은 연결되고 비인가 대상은 실패하는지 함께 검증</span></li></ol>
         <div class="evidence-pair"><figure><img src="assets/images/project-01/troubleshooting.png" alt="문제 원인을 구분하며 테스트한 과정"><figcaption>문제 구간을 분리하고 원인을 확인한 시행착오</figcaption></figure><figure><img src="assets/images/project-01/resolution.png" alt="설정 수정 및 해결 과정"><figcaption>설정 수정 후 구간별 통신을 다시 검증한 결과</figcaption></figure></div>
       </div>
@@ -153,7 +154,7 @@
       <div>
         <h2>테스트 과정을 재현 가능한 증거로 남겼습니다.</h2>
         <div class="result-grid"><article><strong>2개</strong><span>본사·지사 시연 영상 직접 제작</span></article><article><strong>3개 환경</strong><span>본사·지사·재택근무 통신 검증</span></article><article><strong>ACL</strong><span>부서·서비스별 최소 권한 적용</span></article></div>
-        <div class="learning"><small>LEARNING</small><p>ACL은 명령어를 입력하는 작업이 아니라 업무 흐름을 접근 통제 정책으로 변환하는 작업임을 배웠습니다. 또한 정상 연결뿐 아니라 실패해야 하는 경로까지 확인해야 정책의 정확성을 설명할 수 있다는 점을 체득했습니다.</p><p>서버 구축은 팀원이 담당했지만, 네트워크에서 해당 서버까지 필요한 서비스가 도달하는지는 제가 구성한 정책과 시연을 통해 확인했습니다. 역할 경계를 분명히 하면서도 서로의 결과물이 연결되는 지점을 검증하는 협업 경험을 얻었습니다.</p></div>
+        <div class="learning"><small>프로젝트를 마치고</small><p>ACL을 하기 전에는 명령어 형식만 맞으면 된다고 생각했습니다. 실제로 설정해 보니 먼저 누가 어느 서버의 어떤 서비스를 사용해야 하는지 정리해야 했습니다. 허용 테스트만 해서는 부족했고, 막혀야 하는 접근이 실제로 막히는지도 같이 봐야 했습니다.</p><p>서버 구축은 제가 맡은 영역이 아니어서 세부 설정까지 설명하기는 어렵습니다. 대신 네트워크에서 각 서버까지 필요한 통신이 도달하는지 확인했고, 문제가 생기면 서버 담당 팀원과 어느 구간에서 막혔는지 같이 확인했습니다. 이번 프로젝트에서 제가 가장 많이 익힌 부분은 ACL 설정 자체보다도 통신 문제를 한 구간씩 나눠서 확인하는 방법이었습니다.</p></div>
       </div>
     </section>
   </main>

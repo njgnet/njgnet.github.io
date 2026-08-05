@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Eazy Hotel 통합 보안 관제와 취약점 분석, 시스템 점검 자동화 프로젝트">
+  <meta name="description" content="Eazy Hotel 통합 보안 관제, 취약점 분석, 시스템 점검 스크립트 프로젝트">
   <title>Project 02 — NJGNET</title>
   <link rel="stylesheet" href="style.css?v=4">
   <link rel="stylesheet" href="project.css?v=3">
-  <link rel="stylesheet" href="project-02.css?v=1">
+  <link rel="stylesheet" href="project-02.css?v=2">
 </head>
 <body>
   <header class="header">
@@ -18,41 +18,32 @@
   <main class="project-page project02-page">
     <a class="back" href="projects.html">← Projects</a>
 
-    <section class="p2-hero">
-      <div class="p2-title">
-        <p class="kicker">2차 팀 프로젝트 · SECURITY MONITORING</p>
-        <h1>Eazy Hotel<br><span>보안 점검과 관제 구축</span></h1>
-        <p class="p2-lead">호텔 예약 서비스를 직접 구성한 뒤 취약점을 재현하고, 조치 전후를 비교했습니다. 동시에 방화벽·IDS/IPS·로그 관제 환경을 연결하고, Ubuntu 서버의 67개 보안 항목을 확인하는 쉘 스크립트를 만들었습니다.</p>
-        <p class="official-title"><b>프로젝트명</b> Hotel Reservation Security Monitoring System(HRSMS)</p>
+    <section class="project-hero p2-cover">
+      <p class="kicker">PROJECT 02 · SECURITY MONITORING</p>
+      <h1>Eazy Hotel</h1>
+      <p class="hero-subtitle">호텔 예약 시스템<br>보안 관제 구축 과정</p>
+      <p class="p2-summary">웹 서비스에 취약점을 직접 만들어 재현하고, 조치 후 같은 공격이 차단되는지 확인했습니다. Ubuntu 서버 점검 스크립트의 공통 틀을 만들었고, cron 실행 결과를 터미널에 바로 보여주는 방식도 제안해 테스트했습니다.</p>
+      <div class="hero-meta">
+        <span><small>기간</small>2026.06.01 - 06.19</span>
+        <span><small>구성</small>5인 팀 프로젝트</span>
+        <span><small>환경</small>GNS3 · Ubuntu 24.04</span>
+        <span><small>결과</small>프로젝트 1위 · 우수상</span>
       </div>
-      <aside class="p2-facts">
-        <p>PROJECT INFO</p>
-        <dl>
-          <div><dt>기간</dt><dd>2026.06.01 - 06.19</dd></div>
-          <div><dt>구성</dt><dd>5인 팀 프로젝트</dd></div>
-          <div><dt>환경</dt><dd>GNS3 · Ubuntu 24.04</dd></div>
-          <div><dt>결과</dt><dd>2차 프로젝트 우수상</dd></div>
-        </dl>
-      </aside>
     </section>
 
-    <figure class="p2-main-visual">
+    <figure class="p2-topology">
       <img src="assets/images/project-02/network.png" alt="Eazy Hotel GNS3 네트워크 구성도">
-      <figcaption><span>GNS3 NETWORK</span> 외부망, DMZ, 내부 업무망, 보안 관제망으로 나눈 최종 네트워크 구성</figcaption>
+      <figcaption><b>최종 네트워크 구성도</b><span>외부망 · DMZ · 내부 업무망 · 보안 관제망</span></figcaption>
     </figure>
 
-    <section class="section-block p2-overview">
-      <p class="section-no">01 / OVERVIEW</p>
+    <section class="section-block">
+      <p class="section-no">01 / PROJECT</p>
       <div>
-        <h2>왜 호텔 예약 시스템이었나</h2>
-        <p>호텔 예약 서비스에는 회원 정보, 예약 일정, 연락처처럼 보호해야 할 정보가 들어갑니다. 고객은 외부에서 계속 접속하고 관리자는 내부에서 예약을 처리하므로, 웹 서비스와 내부 관리 환경을 나눠 볼 수 있다는 점도 프로젝트 주제로 적합했습니다.</p>
-        <p>처음에는 계획서를 제출하고 피드백을 받은 뒤 작업을 시작했습니다. 최종 환경은 외부망, DMZ, 내부 업무망, 보안 관제망으로 구분했습니다. 외부 요청은 pfSense와 Suricata를 거쳐 웹 서버로 들어오고, 각 장비와 서버에서 생긴 로그는 rsyslog와 Graylog, GoAccess에서 확인하도록 연결했습니다.</p>
-        <div class="p2-scope">
-          <article><small>경계 보안</small><b>pfSense · Suricata</b><span>외부 트래픽 제어와 공격 탐지</span></article>
-          <article><small>로그 관제</small><b>rsyslog · Graylog</b><span>장비와 서버 로그 중앙 수집</span></article>
-          <article><small>상태 확인</small><b>GoAccess · PMM</b><span>웹 접근 로그와 서버 자원 확인</span></article>
-          <article><small>보안 점검</small><b>Shell Script</b><span>KISA 기준 67개 항목 점검</span></article>
-        </div>
+        <h2>호텔 예약 서비스를 만들고<br>공격부터 관제까지 연결했습니다.</h2>
+        <p>Eazy Hotel은 회원가입, 로그인, 객실 조회와 예약 기능이 있는 가상의 호텔 서비스입니다. 고객 정보와 예약 데이터를 다루고 외부 접속이 계속 발생하는 서비스라서, 웹 취약점과 네트워크 보안, 로그 관제를 한 프로젝트 안에서 시험하기에 적합하다고 판단했습니다.</p>
+        <p>계획서를 먼저 제출해 피드백을 받은 뒤 실제 환경을 만들었습니다. 외부망에서 들어오는 요청은 pfSense와 Suricata를 거쳐 DMZ의 웹 서버로 전달했고, 내부 업무망과 보안 관제망은 별도 구간으로 나눴습니다. 장비와 서버의 로그는 rsyslog, Graylog, GoAccess에서 확인하고 PMM으로 서버와 DB 상태를 확인했습니다.</p>
+        <p>저는 GNS3 네트워크 구성에 참여했고, 이후에는 취약점 재현과 조치 확인, 모의해킹 결과보고서 작성, 시스템 점검 스크립트 틀 작성에 더 집중했습니다.</p>
+        <div class="tags"><span>GNS3</span><span>Ubuntu</span><span>pfSense</span><span>Suricata</span><span>Graylog</span><span>Shell Script</span></div>
       </div>
     </section>
 
@@ -61,112 +52,120 @@
       <div>
         <h2>계획서부터 최종 제출까지</h2>
         <ol class="process-list">
-          <li><span>01</span><div><b>계획서 제출 및 피드백</b><p>호텔 예약 시스템, 통합 보안 관제, 쉘 스크립트 자동화를 프로젝트 범위로 정했습니다.</p></div></li>
-          <li><span>02</span><div><b>GNS3 네트워크와 서비스 환경 구성</b><p>외부망·DMZ·내부망·관제망을 나누고 웹, DB, 방화벽, 관제 도구가 연결될 수 있도록 구성했습니다.</p></div></li>
-          <li><span>03</span><div><b>취약점 재현과 보안 조치</b><p>웹 코드에 취약한 상태를 만들고 공격 조건을 확인한 뒤, 코드를 수정해 같은 요청이 차단되는지 다시 테스트했습니다.</p></div></li>
-          <li><span>04</span><div><b>시스템 점검 스크립트 작성</b><p>Ubuntu 환경에서 67개 항목을 순서대로 점검하고 결과를 양호·취약·수동 확인으로 집계하도록 틀을 잡았습니다.</p></div></li>
-          <li><span>05</span><div><b>보고서 정리 및 최종 제출</b><p>계획서, 모의해킹 결과보고서, 시스템 점검보고서, 쉘 스크립트, 최종 통합보고서를 제출했습니다.</p></div></li>
+          <li><span>01</span><div><b>계획서 작성 및 피드백</b><p>호텔 예약 서비스, 통합 보안 관제, 취약점 진단과 점검 자동화를 프로젝트 범위로 정했습니다.</p></div></li>
+          <li><span>02</span><div><b>네트워크와 서비스 환경 구성</b><p>GNS3에서 외부망, DMZ, 내부 업무망과 관제망을 나누고 웹·DB·보안 솔루션을 연결했습니다.</p></div></li>
+          <li><span>03</span><div><b>취약점 환경 제작 및 재현</b><p>안전한 코드를 일부러 취약한 상태로 바꾼 뒤 공격 입력값이 실제로 동작하는지 확인했습니다.</p></div></li>
+          <li><span>04</span><div><b>보안 조치 및 재시험</b><p>입력값 검증, Prepared Statement, 세션과 인가 검증을 다시 적용하고 동일한 공격이 차단되는지 확인했습니다.</p></div></li>
+          <li><span>05</span><div><b>시스템 점검과 문서 정리</b><p>67개 점검 항목을 실행하는 쉘 스크립트를 정리하고 모의해킹·시스템 점검·최종보고서를 제출했습니다.</p></div></li>
         </ol>
       </div>
     </section>
 
-    <section class="section-block p2-role">
+    <section class="section-block ownership-section">
       <p class="section-no">03 / MY ROLE</p>
       <div>
-        <h2>제가 맡은 부분</h2>
-        <div class="role-list">
-          <article><span>01</span><div><b>GNS3 네트워크 구성</b><p>계획 단계에서 전체 토폴로지를 설계하고 각 구간이 연결되도록 네트워크 환경 구성에 참여했습니다.</p></div></article>
-          <article><span>02</span><div><b>취약점 분석과 재현</b><p>모의해킹을 많이 수행했다기보다, 취약점이 생기는 조건을 분석하고 웹 코드에 취약한 상태를 직접 만든 뒤 실제로 재현되는지 확인했습니다. 조치 후에는 같은 입력이 차단되는지도 다시 봤습니다.</p></div></article>
-          <article><span>03</span><div><b>모의해킹 결과보고서 작성</b><p>SQL Injection, Open Redirection, Session Fixation, Stored XSS, IDOR, SSRF의 원인과 재현 절차, 조치 코드, 재시험 결과를 보고서 형식으로 정리했습니다.</p></div></article>
-          <article><span>04</span><div><b>보안 점검 스크립트 틀 작성</b><p>67개 점검 함수가 같은 형식으로 결과를 출력하도록 공통 함수와 집계 방식을 만들었습니다. 전체 항목과 취약 항목만 따로 볼 수 있도록 실행 모드도 나눴습니다.</p></div></article>
-          <article><span>05</span><div><b>cron 실시간 출력 방식 제안</b><p>정해진 시간에 스크립트를 실행하면서 결과를 현재 Ubuntu 터미널에 바로 띄우는 방식을 제안하고 직접 테스트했습니다. 시연까지 했지만 최종 운영 방식으로는 채택되지 않았습니다.</p></div></article>
+        <h2>제가 맡은 작업을 기준으로 정리했습니다.</h2>
+        <div class="ownership-grid p2-roles">
+          <article class="primary-role"><small>가장 많이 한 부분</small><h3>취약점 분석·재현</h3><ul><li>취약한 코드 상태 직접 구성</li><li>공격 조건과 입력값 테스트</li><li>보안 조치 후 같은 공격 재시험</li><li>모의해킹 결과보고서 작성</li></ul></article>
+          <article><small>직접 작성</small><h3>점검 스크립트 틀</h3><p>67개 함수가 같은 형식으로 결과를 출력하도록 공통 함수, 결과 집계, 실행 순서를 정리했습니다.</p></article>
+          <article><small>구축 참여</small><h3>GNS3 네트워크</h3><p>외부망, DMZ, 내부망, 관제망으로 나눈 전체 토폴로지 설계와 연결 작업에 참여했습니다.</p></article>
+          <article><small>제안·시연</small><h3>cron 터미널 출력</h3><p>예약 시간에 점검을 실행하고 결과를 현재 Ubuntu 터미널에 바로 보여주는 방식을 제안하고 영상으로 남겼습니다.</p></article>
         </div>
+        <p class="role-note">pfSense·Suricata 정책, 웹·DB 구축, Graylog·GoAccess·PMM은 담당 팀원이 나누어 작업했습니다. 저는 해당 환경을 사용해 취약점과 점검 결과가 실제로 확인되는지를 보는 쪽에 더 가까웠습니다.</p>
       </div>
     </section>
 
-    <section class="p2-evidence">
-      <div>
-        <p class="section-no">04 / PENTEST</p>
-        <h2>취약점을 만든 뒤 다시 막아 본 과정</h2>
-        <p>진단 대상은 Eazy Hotel 웹 서비스였습니다. 인증, 회원 관리, 시스템 접근 세 영역에서 6개 취약점을 정리했습니다. 각 항목은 취약한 코드, 공격 입력값, 재현 화면, 수정 코드, 조치 후 결과 순서로 작성했습니다.</p>
-        <ul class="plain-list"><li>인증·세션: SQL Injection, Open Redirection, Session Fixation</li><li>회원 정보·인가: Stored XSS, IDOR</li><li>시스템 접근: SSRF</li></ul>
+    <section class="evidence-section">
+      <div class="evidence-copy">
+        <p class="section-no">04 / PENTEST REPORT</p>
+        <h2>공격 화면만 모으지 않고 원인과 조치까지 적었습니다.</h2>
+        <p>모의해킹 결과보고서는 취약점 설명, 취약한 코드, 재현 절차, 공격 증거, 대응 방안, 수정 코드와 조치 후 결과 순서로 작성했습니다. 공격이 된다는 사실보다 왜 발생했고 어떤 코드를 바꾸면 막히는지를 남기는 데 집중했습니다.</p>
+        <p>진단 대상은 Eazy Hotel 웹 서비스였고, 인증·회원 관리·시스템 접근 영역에서 총 6개 항목을 정리했습니다.</p>
       </div>
-      <figure><img src="assets/images/project-02/pentest-summary.png" alt="모의해킹 결과보고서 취약점 요약"><figcaption>모의해킹 결과보고서에 정리한 6개 취약점</figcaption></figure>
+      <figure><img src="assets/images/project-02/pentest-summary.png" alt="모의해킹 결과보고서 취약점 요약"><figcaption>모의해킹 결과보고서 - 6개 취약점 요약</figcaption></figure>
     </section>
 
-    <section class="section-block case-section">
-      <p class="section-no">05 / CASES</p>
+    <section class="section-block p2-vulnerabilities">
+      <p class="section-no">05 / VULNERABILITIES</p>
       <div>
-        <h2>보고서에 정리한 대표 사례</h2>
-        <div class="case-grid">
-          <article><span>SQL INJECTION</span><h3>비밀번호 없이 다른 계정으로 로그인</h3><p>로그인 쿼리에 입력값이 그대로 들어가도록 취약한 상태를 만들고, LIMIT 값을 바꿔 특정 사용자 계정으로 인증이 우회되는지 확인했습니다. 이후 Prepared Statement와 password_verify()를 적용하고 같은 페이로드가 차단되는지 재시험했습니다.</p></article>
-          <article><span>IDOR</span><h3>예약 번호 변경으로 타인의 예약 조회</h3><p>예약 상세 조회 조건에서 로그인 사용자의 member_id 검증을 제거해 취약한 상태를 재현했습니다. URL의 예약 ID만 바꿔 다른 사람의 예약을 보거나 취소할 수 있는지 확인한 뒤, 조회와 수정 쿼리에 소유자 조건을 다시 넣었습니다.</p></article>
-          <article><span>SSRF</span><h3>웹 서버를 이용한 내부 자원 요청</h3><p>partner-url 값을 검증하지 않는 상태에서 file:// 스키마와 내부 주소 요청을 시험했습니다. 수정 후에는 http·https만 허용하고, 루프백과 내부망 주소 및 허용되지 않은 도메인을 차단했습니다.</p></article>
+        <h2>직접 재현하고 조치 결과를 확인한 취약점</h2>
+        <div class="vuln-list">
+          <article><span>01</span><div><b>SQL Injection</b><p>로그인 쿼리에 입력값이 직접 들어가도록 만들고, LIMIT 값을 바꿔 특정 계정으로 인증이 우회되는지 확인했습니다. Prepared Statement와 password_verify()를 다시 적용한 뒤 같은 입력이 막히는지 시험했습니다.</p></div></article>
+          <article><span>02</span><div><b>Open Redirection</b><p>로그인 후 이동할 next 값에 외부 주소를 넣어 다른 사이트로 이동하는지 확인했습니다. 내부 경로와 허용된 주소만 통과시키도록 검증 조건을 추가했습니다.</p></div></article>
+          <article><span>03</span><div><b>Session Fixation</b><p>로그인 전후에 PHPSESSID가 바뀌지 않는 상태를 재현했습니다. 로그인 성공 시 세션 ID를 새로 발급하도록 수정한 뒤 기존 ID가 더 이상 유효하지 않은지 확인했습니다.</p></div></article>
+          <article><span>04</span><div><b>Stored XSS</b><p>회원 정보에 저장한 스크립트가 예약 화면과 관리자 화면에서 실행되도록 취약한 출력 상태를 만들었습니다. htmlspecialchars()를 적용해 코드가 아닌 문자로 출력되는지 확인했습니다.</p></div></article>
+          <article><span>05</span><div><b>IDOR</b><p>예약 조회 조건에서 로그인 사용자의 member_id 확인을 제거했습니다. URL의 예약 번호만 바꿔 다른 사람의 예약을 조회·취소할 수 있는지 확인한 후 소유권 조건을 다시 넣었습니다.</p></div></article>
+          <article><span>06</span><div><b>SSRF</b><p>partner-url 값을 검증하지 않고 서버가 요청하게 만든 뒤 file://와 내부 주소 접근을 시험했습니다. 허용 프로토콜과 도메인을 제한하고 내부망 주소는 차단했습니다.</p></div></article>
         </div>
         <div class="report-pair">
-          <figure><img src="assets/images/project-02/sqli-report.png" alt="SQL Injection 취약점 보고서"><figcaption>SQL Injection 발생 원인과 취약 코드 정리</figcaption></figure>
-          <figure><img src="assets/images/project-02/idor-report.png" alt="IDOR 취약점 보고서"><figcaption>IDOR 취약점 재현 조건과 소유권 검증 누락</figcaption></figure>
+          <figure><img src="assets/images/project-02/sqli-report.png" alt="SQL Injection 결과보고서"><figcaption>SQL Injection 발생 원인과 취약 코드</figcaption></figure>
+          <figure><img src="assets/images/project-02/idor-report.png" alt="IDOR 결과보고서"><figcaption>IDOR에서 누락된 예약 소유자 검증</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="section-block script-section">
-      <p class="section-no">06 / SHELL SCRIPT</p>
+    <section class="section-block p2-script">
+      <p class="section-no">06 / SYSTEM CHECK</p>
       <div>
-        <h2>67개 항목을 같은 방식으로 점검하도록</h2>
-        <p>점검 기준은 KISA 주요정보통신기반시설 취약점 분석·평가 가이드를 참고했습니다. 각 항목을 U_01부터 U_67까지 함수로 나누고, 공통 출력 함수에서 전체·양호·취약·수동 확인 개수를 집계하도록 구성했습니다.</p>
-        <div class="script-points">
-          <article><b>공통 출력 형식</b><p>항목 코드, 점검 내용, 결과, 필요한 조치사항을 같은 형식으로 출력했습니다.</p></article>
-          <article><b>두 가지 실행 모드</b><p><code>all</code>은 전체 항목을, <code>vulnerable</code>은 취약한 항목만 확인하도록 했습니다.</p></article>
-          <article><b>Ubuntu 기준 반영</b><p>wheel 대신 sudo 그룹을 확인하는 등 실제 실습 환경에 맞게 일부 점검 기준을 조정했습니다.</p></article>
-          <article><b>재점검 결과</b><p>처음 발견된 9개 취약 항목을 조치한 뒤 67개 항목이 모두 양호로 표시되는 것을 확인했습니다.</p></article>
-        </div>
-        <div class="check-result">
-          <figure><img src="assets/images/project-02/check-before.png" alt="조치 전 시스템 점검 결과"><figcaption>조치 전 - 전체 67개 중 취약 9개</figcaption></figure>
+        <h2>67개 점검 항목의 공통 틀을 만들었습니다.</h2>
+        <p>시스템 점검은 KISA 주요정보통신기반시설 취약점 분석·평가 가이드를 참고했습니다. 항목별 함수는 팀에서 나눠 작성할 수 있지만 결과 형식과 집계 방식이 제각각이면 마지막에 합치기 어렵다고 생각했습니다. 그래서 공통 출력 함수와 전체 실행 구조부터 만들었습니다.</p>
+        <ol class="debug-steps">
+          <li><b>result_print 함수</b><span>항목 코드, 점검 내용, 양호·취약 결과와 필요한 조치사항을 같은 형식으로 출력</span></li>
+          <li><b>결과 자동 집계</b><span>전체, 양호, 취약, 수동 확인 개수를 실행할 때마다 누적</span></li>
+          <li><b>실행 모드 분리</b><span>전체를 보는 all 모드와 취약한 항목만 보는 vulnerable 모드 구성</span></li>
+          <li><b>67개 함수 순차 실행</b><span>U_01부터 U_67까지 존재하는 함수를 찾아 순서대로 실행</span></li>
+          <li><b>Ubuntu 환경 반영</b><span>wheel 그룹 대신 sudo 그룹을 확인하는 등 실습 환경에 맞게 기준 조정</span></li>
+        </ol>
+        <p>첫 점검에서는 root 원격 접속, 패스워드 복잡성, 계정 잠금, su 제한, 불필요 계정, 세션 종료, FTP root 차단, 로그인 경고문, 시스템 로깅까지 9개 항목이 취약으로 나왔습니다. 설정을 수정한 뒤 다시 실행해 67개 항목이 모두 양호로 표시되는 것을 확인했습니다.</p>
+        <div class="check-compare">
+          <figure><img src="assets/images/project-02/check-before.png" alt="조치 전 점검 결과"><figcaption>조치 전 - 양호 58, 취약 9</figcaption></figure>
           <span>→</span>
-          <figure><img src="assets/images/project-02/check-after.png" alt="조치 후 시스템 점검 결과"><figcaption>조치 후 - 전체 67개 양호</figcaption></figure>
+          <figure><img src="assets/images/project-02/check-after.png" alt="조치 후 점검 결과"><figcaption>조치 후 - 67개 전체 양호</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="p2-evidence cron-section">
+    <section class="section-block p2-cron" id="cron-test">
+      <p class="section-no">07 / MY PROPOSAL</p>
       <div>
-        <p class="section-no">07 / PROPOSAL</p>
-        <h2>채택되지는 않았지만 직접 테스트한 방식</h2>
-        <p>cron으로 정해진 시간에 점검 스크립트를 실행하고 결과를 로그 파일로 남기는 방식은 보고서에 포함했습니다. 여기에 한 가지를 더 제안했습니다. 관리자가 로그 명령어를 따로 입력하지 않아도 현재 열려 있는 Ubuntu 터미널에 점검 결과가 바로 나타나게 하는 방식이었습니다.</p>
-        <p>시간을 지정할 수 있고 결과를 바로 볼 수 있다는 점이 편리하다고 생각해 직접 설정하고 영상으로 남겼습니다. 다만 최종 프로젝트에서는 이 실시간 터미널 출력 방식이 채택되지 않았습니다. 아래 영상은 당시 제안 방식을 확인하기 위해 만든 테스트 기록입니다.</p>
-        <a class="text-link" href="#cron-video">테스트 영상 보기 ↓</a>
+        <h2>채택되지는 않았지만 직접 동작까지 확인한 제안</h2>
+        <p>cron으로 정해진 시간에 점검 스크립트를 실행하고 결과를 로그 파일에 저장하는 내용이 있었습니다. 저는 여기에 결과를 현재 열려 있는 Ubuntu 터미널에도 바로 보여주면 관리자가 별도 명령어를 입력하지 않아도 확인하기 편하겠다고 생각했습니다.</p>
+        <p>실행 시간을 지정하고 활성 터미널(TTY)로 결과를 보내는 방법을 시험했습니다. 화면에 결과가 나타나는 것까지 확인해 영상으로 남겼지만, 팀의 최종 운영 방식으로는 채택되지 않았습니다. 실제 적용 성과처럼 쓰지 않고 제가 냈던 개선 의견과 테스트 기록으로 남깁니다.</p>
+        <article class="proposal-video">
+          <div><small>CRON · TTY OUTPUT TEST</small><h3>점검 결과 실시간 출력 테스트</h3><p>예약한 시간에 스크립트가 실행되고, 열려 있는 Ubuntu 터미널에 점검 결과가 표시되는지 확인했습니다.</p><a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-cron-live-demo.mp4">영상 파일 열기 ↗</a></div>
+          <video controls preload="metadata"><source src="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-cron-live-demo.mp4" type="video/mp4">영상을 재생할 수 없습니다.</video>
+        </article>
       </div>
-      <figure><img src="assets/images/project-02/cron-report.png" alt="보안 점검 자동화 보고서"><figcaption>시스템 점검보고서의 cron 자동 실행 및 로그 저장 내용</figcaption></figure>
     </section>
 
-    <section class="award-block">
-      <div><p class="section-no">08 / RESULT</p><h2>2차 프로젝트 우수상</h2><p>프로젝트 평가에서 1위를 해 팀원들과 함께 우수상을 받았습니다. 네트워크, 웹 서비스, 보안 솔루션, 로그 관제, 취약점 점검 결과가 하나의 흐름으로 연결됐다는 점이 좋은 평가를 받았습니다.</p></div>
-      <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-award.pdf">상장 PDF 보기 ↗</a>
+    <section class="evidence-section reverse">
+      <div class="evidence-copy">
+        <p class="section-no">08 / DOCUMENTATION</p>
+        <h2>점검 결과는 조치 전후가 보이도록 정리했습니다.</h2>
+        <p>시스템 점검보고서에는 총 67개 항목 중 취약했던 9개 항목과 실제 설정 변경 내용을 기록했습니다. 단순히 최종 결과만 쓰지 않고 수정한 파일과 설정값, 서비스 재시작 명령, 재점검 결과를 함께 남겼습니다.</p>
+        <p>cron 자동 실행과 날짜별 로그 저장 방식도 보고서에 포함했지만, 앞에서 소개한 터미널 실시간 출력은 별도로 제안하고 시험한 방식입니다.</p>
+      </div>
+      <figure><img src="assets/images/project-02/cron-report.png" alt="시스템 점검 자동화 보고서"><figcaption>시스템 점검보고서 - cron 정기 실행과 로그 저장</figcaption></figure>
     </section>
 
-    <section class="p2-files" id="deliverables">
-      <div class="files-heading"><p class="section-no">09 / DELIVERABLES</p><h2>제출 자료와 테스트 영상</h2><p>계획서부터 최종보고서까지 제출 순서대로 정리했습니다. 모의해킹 결과보고서와 시스템 점검 스크립트는 제가 맡은 작업을 확인할 수 있는 핵심 자료입니다.</p></div>
-      <div class="file-list">
+    <section class="media-library p2-deliverables">
+      <div class="media-heading"><p class="section-no">09 / DELIVERABLES</p><h2>최종 제출 자료</h2><p>계획서를 먼저 제출해 피드백을 받고, 작업이 끝난 뒤 모의해킹·시스템 점검 결과와 전체 프로젝트 내용을 각각 문서로 정리했습니다.</p></div>
+      <div class="p2-file-list">
         <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-plan.pptx"><span>01</span><b>프로젝트 계획서</b><small>PPTX ↗</small></a>
         <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-pentest-report.pdf"><span>02</span><b>모의해킹 결과보고서</b><small>PDF ↗</small></a>
         <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-system-check-report.pdf"><span>03</span><b>시스템 점검보고서</b><small>PDF ↗</small></a>
         <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-security-check.sh.txt"><span>04</span><b>시스템 점검 쉘 스크립트</b><small>TXT ↗</small></a>
         <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-final-report.pptx"><span>05</span><b>최종 통합보고서</b><small>PPTX ↗</small></a>
       </div>
-      <article class="cron-video" id="cron-video">
-        <div><small>CRON · TERMINAL OUTPUT TEST</small><h3>점검 결과 실시간 출력 테스트</h3><p>정해진 시간에 스크립트가 실행되고, 활성화된 Ubuntu 터미널에 결과가 표시되는지 확인한 영상입니다.</p></div>
-        <video controls preload="metadata"><source src="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-cron-live-demo.mp4" type="video/mp4">영상을 재생할 수 없습니다.</video>
-        <a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-cron-live-demo.mp4">영상 파일 열기 ↗</a>
-      </article>
     </section>
 
-    <section class="section-block p2-retro">
-      <p class="section-no">10 / REVIEW</p>
+    <section class="section-block result-section p2-result">
+      <p class="section-no">10 / RESULT</p>
       <div>
-        <h2>프로젝트를 마치고</h2>
-        <p>1차 프로젝트에서는 네트워크 설정과 ACL에 집중했다면, 2차에서는 웹 취약점과 시스템 점검까지 범위가 넓어졌습니다. 이미 안전하게 만들어진 기능을 보는 것보다 취약한 조건을 직접 만들고 공격이 되는 이유를 확인한 뒤 다시 막아 보는 과정이 이해에 도움이 됐습니다.</p>
-        <p>점검 스크립트는 여러 사람이 항목을 나눠 작성하더라도 출력 형식이 달라지지 않게 틀을 먼저 잡는 것이 중요했습니다. 자동화 아이디어가 최종 방식으로 사용되지는 않았지만, 필요한 기능을 생각하고 실제 화면에서 동작하는지 시험해 본 경험으로 남았습니다.</p>
+        <h2>2차 프로젝트 1위, 우수상</h2>
+        <div class="result-grid"><article><strong>6건</strong><span>웹 취약점 재현·조치 확인</span></article><article><strong>67개</strong><span>Ubuntu 시스템 점검 항목</span></article><article><strong>우수상</strong><span>2차 프로젝트 평가 1위</span></article></div>
+        <div class="learning"><small>프로젝트를 마치고</small><p>1차에서는 네트워크 연결과 ACL에 집중했다면 2차에서는 웹 코드와 운영체제 설정까지 같이 봤습니다. 공격 명령만 따라 하는 것보다 취약한 코드를 직접 만들고, 왜 공격이 되는지 확인한 다음 다시 막아 보는 과정이 더 기억에 남았습니다.</p><p>스크립트 작업에서는 점검 명령어보다 여러 항목의 결과를 같은 형식으로 모으는 구조가 중요했습니다. 자동화 제안은 최종 방식에 들어가지는 않았지만, 아이디어를 말하는 데서 끝내지 않고 실제 화면에서 동작하는지 시험해 본 경험으로 남았습니다.</p></div>
+        <a class="award-link" href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-award.pdf">우수상 상장 보기 ↗</a>
       </div>
     </section>
   </main>

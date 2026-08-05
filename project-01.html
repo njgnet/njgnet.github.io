@@ -101,12 +101,31 @@
       <figure><img src="assets/images/project-01/acl-test.png" alt="ACL 정책 적용 후 통신 테스트 화면"><figcaption>ACL 정책 적용 후 허용·차단 통신 검증</figcaption></figure>
     </section>
 
+    <section class="section-block scenario-section">
+      <p class="section-no">07 / TEST SCENARIOS</p><div><h2>ACL 기준표를 네 가지 통신 구간으로 나누어 검증했습니다.</h2><p>처음에는 규칙을 한 번에 적용하려고 하면서 어느 조건에서 통신이 막히는지 찾기 어려웠습니다. 이후 본사 내부, 본사에서 지사, 지사에서 본사, 재택근무 구간으로 테스트 범위를 나누고 각 구간에서 출발지·목적지·서비스를 하나씩 바꾸어 결과를 확인했습니다.</p>
+        <div class="scenario-grid"><article><span>01</span><h3>본사 내부</h3><p>일반 부서 간 Ping은 제한하고 보안팀은 관리 목적으로 전체 구간을 확인하도록 구성했습니다.</p><ul><li>전 부서 WEB·FTP·DNS 확인</li><li>DB는 개발·재무·보안만 허용</li><li>LOG는 개발·보안 중심으로 허용</li></ul></article><article><span>02</span><h3>본사 → 지사</h3><p>업무 서버에 필요한 서비스만 허용하고 임의의 Ping과 불필요한 부서 간 통신은 차단했습니다.</p><ul><li>지사 WEB 접근 확인</li><li>보안·서버 구간 FTP 확인</li><li>인사·영업 동일 부서 예외 검증</li></ul></article><article><span>03</span><h3>지사 → 본사</h3><p>지사 사용자는 본사 WEB·DNS를 사용하고 지사 서버는 로그 전송 경로만 추가로 허용했습니다.</p><ul><li>본사 WEB·DNS 접근 확인</li><li>지사 서버 LOG 전송 확인</li><li>그 외 본사 내부 접근 차단</li></ul></article><article><span>04</span><h3>재택근무</h3><p>업무용 WEB·FTP 범위만 사용하도록 제한하고 내부망 Ping은 차단했습니다.</p><ul><li>본사 WEB·FTP 확인</li><li>지사 WEB 접근 확인</li><li>내부망 직접 Ping 차단</li></ul></article></div>
+      </div>
+    </section>
+
+    <section class="section-block troubleshooting-detail">
+      <p class="section-no">08 / ITERATION</p><div><h2>규칙 하나를 바꿀 때마다 해당 경로부터 다시 확인했습니다.</h2><p>ACL은 위에서부터 순서대로 평가되므로 넓은 차단 규칙이 앞에 있거나 적용 방향을 잘못 지정하면 이후 허용 규칙이 있어도 통신이 실패했습니다. 설정을 무작정 바꾸지 않고 다음 순서로 원인을 좁혔습니다.</p>
+        <ol class="debug-steps"><li><b>기본 연결성 확인</b><span>ACL을 제외했을 때 라우팅과 인터페이스가 정상인지 확인</span></li><li><b>적용 위치 확인</b><span>어느 인터페이스의 inbound/outbound에 적용되었는지 확인</span></li><li><b>규칙 순서 확인</b><span>필요한 permit보다 넓은 deny가 먼저 평가되는지 점검</span></li><li><b>서비스 단위 확인</b><span>Ping, WEB, FTP, DNS, DB, LOG를 개별 시험</span></li><li><b>반대 조건 확인</b><span>허용 대상은 연결되고 비인가 대상은 실패하는지 함께 검증</span></li></ol>
+        <div class="evidence-pair"><figure><img src="assets/images/project-01/troubleshooting.png" alt="문제 원인을 구분하며 테스트한 과정"><figcaption>문제 구간을 분리하고 원인을 확인한 시행착오</figcaption></figure><figure><img src="assets/images/project-01/resolution.png" alt="설정 수정 및 해결 과정"><figcaption>설정 수정 후 구간별 통신을 다시 검증한 결과</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="media-library">
+      <div class="media-heading"><p class="section-no">09 / DELIVERABLES</p><h2>최종보고서와 직접 제작한 시연 영상</h2><p>전체 구성이 완료된 뒤 ACL, VPN, Dynamic NAT까지 포함한 최종 상태에서 본사와 지사의 통신이 정책대로 동작하는지 시나리오별로 녹화했습니다.</p></div>
+      <div class="download-card"><div><small>FINAL REPORT · PPTX</small><h3>1차 프로젝트 최종보고서</h3><p>프로젝트 배경, 설계, 역할, 구축 과정, 테스트와 트러블슈팅을 포함한 팀 최종 산출물입니다.</p></div><a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-01-assets/project-01-final-report.pptx">PPT 다운로드 ↓</a></div>
+      <div class="video-grid"><article><div class="video-label"><span>HEADQUARTERS</span><b>본사 네트워크 시연</b></div><video controls preload="metadata"><source src="https://github.com/njgnet/njgnet.github.io/releases/download/project-01-assets/project-01-hq-demo.mp4" type="video/mp4">영상을 재생할 수 없습니다.</video><a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-01-assets/project-01-hq-demo.mp4">영상 파일 열기 ↗</a></article><article><div class="video-label"><span>BRANCH</span><b>지사 네트워크 시연</b></div><video controls preload="metadata"><source src="https://github.com/njgnet/njgnet.github.io/releases/download/project-01-assets/project-01-branch-demo.mp4" type="video/mp4">영상을 재생할 수 없습니다.</video><a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-01-assets/project-01-branch-demo.mp4">영상 파일 열기 ↗</a></article></div><p class="media-note">영상 제작 범위: 전체 Packet Tracer 네트워크 구축 완료 후 본사·지사 구간의 접근 허용, 차단 및 서비스 통신 결과 기록</p>
+    </section>
+
     <section class="section-block result-section">
-      <p class="section-no">07 / RESULT</p>
+      <p class="section-no">10 / RESULT</p>
       <div>
         <h2>테스트 과정을 재현 가능한 증거로 남겼습니다.</h2>
         <div class="result-grid"><article><strong>2개</strong><span>본사·지사 시연 영상 직접 제작</span></article><article><strong>3개 환경</strong><span>본사·지사·재택근무 통신 검증</span></article><article><strong>ACL</strong><span>부서·서비스별 최소 권한 적용</span></article></div>
-        <div class="learning"><small>LEARNING</small><p>ACL은 명령어를 입력하는 작업이 아니라 업무 흐름을 접근 통제 정책으로 변환하는 작업임을 배웠습니다. 또한 정상 연결뿐 아니라 실패해야 하는 경로까지 확인해야 정책의 정확성을 설명할 수 있다는 점을 체득했습니다.</p></div>
+        <div class="learning"><small>LEARNING</small><p>ACL은 명령어를 입력하는 작업이 아니라 업무 흐름을 접근 통제 정책으로 변환하는 작업임을 배웠습니다. 또한 정상 연결뿐 아니라 실패해야 하는 경로까지 확인해야 정책의 정확성을 설명할 수 있다는 점을 체득했습니다.</p><p>서버 구축은 팀원이 담당했지만, 네트워크에서 해당 서버까지 필요한 서비스가 도달하는지는 제가 구성한 정책과 시연을 통해 확인했습니다. 역할 경계를 분명히 하면서도 서로의 결과물이 연결되는 지점을 검증하는 협업 경험을 얻었습니다.</p></div>
       </div>
     </section>
   </main>

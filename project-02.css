@@ -12,6 +12,7 @@ body{background:#f7f7f5}
 .compact-topology{width:min(540px,48%)}
 .compact-topology img{max-height:310px}
 .p2-roles+.role-note,.role-note{max-width:780px;margin-top:28px;padding:20px 24px;color:#5f5f5f;background:#eceee9;border-left:3px solid #315efb;line-height:1.75}
+.p2-roles>article:last-child{grid-column:1/-1}
 .p2-vulnerabilities .vuln-list{margin-top:45px;border-top:1px solid #111}
 .vuln-list article{display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid #d9d9d5}
 .vuln-list article>span{color:#315efb;font-size:11px}
@@ -47,6 +48,10 @@ body{background:#f7f7f5}
 .p2-file-list b{font-size:18px}
 .p2-file-list small{color:#777}
 .award-link{display:inline-block;margin-top:35px;padding-bottom:4px;color:#111;font-weight:700;text-decoration:none;border-bottom:1px solid #111}
+.award-showcase{display:grid;grid-template-columns:minmax(240px,40%) minmax(0,1fr);gap:32px;align-items:center;margin:48px 0 0;padding:24px;background:#fff;border:1px solid #d9d9d5}
+.award-showcase img{display:block;width:100%;max-height:620px;object-fit:contain;background:#fff}
+.award-showcase figcaption{display:flex;flex-direction:column;gap:12px;color:#666;line-height:1.7}
+.award-showcase figcaption b{color:#111;font-size:26px}
 @media(max-width:820px){
   .vuln-list article{grid-template-columns:32px minmax(0,1fr)}
   .vuln-list article>div{grid-template-columns:1fr;gap:8px}
@@ -55,6 +60,8 @@ body{background:#f7f7f5}
   .p2-topology figcaption{flex-direction:column;gap:4px}
   .compact-topology{width:min(540px,100%)}
   .p2-cron{padding:42px 24px}
+  .award-showcase{grid-template-columns:1fr}
+  .award-showcase img{max-height:520px}
 }
 @media(max-width:480px){
   .project02-page{width:88vw}

@@ -1,1 +1,116 @@
-<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Project 01 — NJGNET</title><link rel="stylesheet" href="style.css?v=3"></head><body><header class="header"><a class="logo" href="index.html">NJG<span>NET</span></a><nav><a href="about.html">About</a><a class="active" href="projects.html">Projects</a><a href="awards.html">Awards</a><a href="skills.html">Skills</a></nav></header><main class="subpage"><a class="back" href="projects.html">← Projects</a><section class="detail-hero"><p class="kicker">PROJECT 01</p><h1>1차 프로젝트</h1><p>상세 내용은 다음 단계에서 추가합니다.</p></section></main><footer><span>© 2026 NJGNET</span><a href="project-02.html">다음 프로젝트 →</a></footer></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Simmit Pay 금융 플랫폼 통합 인프라 및 보안 네트워크 구축 프로젝트">
+  <title>Project 01 — NJGNET</title>
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="project.css?v=1">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">NJG<span>NET</span></a>
+    <nav><a href="about.html">About</a><a class="active" href="projects.html">Projects</a><a href="awards.html">Awards</a><a href="skills.html">Skills</a></nav>
+  </header>
+
+  <main class="project-page">
+    <a class="back" href="projects.html">← Projects</a>
+
+    <section class="project-hero">
+      <p class="kicker">PROJECT 01 · NETWORK INFRASTRUCTURE</p>
+      <h1>Simmit Pay</h1>
+      <p class="hero-subtitle">금융 플랫폼 기반 통합 인프라 및<br>보안 네트워크 구축</p>
+      <div class="hero-meta">
+        <span><small>기간</small>2026.04.13 — 04.24</span>
+        <span><small>구성</small>4인 팀 프로젝트</span>
+        <span><small>환경</small>Cisco Packet Tracer</span>
+        <span><small>핵심 기여</small>ACL 구현·검증</span>
+      </div>
+    </section>
+
+    <section class="project-intro section-block">
+      <p class="section-no">01 / OVERVIEW</p>
+      <div>
+        <h2>업무 흐름에 맞는 통신만 허용하는<br>본사·지사 네트워크를 구축했습니다.</h2>
+        <p>가상의 금융회사 Simmit Pay를 대상으로 본사, 지사, 재택근무 환경을 구성했습니다. 부서별 VLAN과 라우팅을 적용하고, 서버와 사용자 사이의 업무 흐름을 ACL 정책으로 변환해 필요한 통신은 허용하고 불필요한 접근은 차단했습니다.</p>
+        <p>저는 Cisco Packet Tracer 네트워크 구축에 참여했으며, 특히 <strong>ACL 정책 기준 정리, 장비 설정, 반복 테스트와 최종 통신 검증</strong>을 중심으로 수행했습니다.</p>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <p class="section-no">02 / PROCESS</p>
+      <div>
+        <h2>계획부터 최종 검증까지</h2>
+        <ol class="process-list">
+          <li><span>01</span><div><b>계획서 작성·제출</b><p>약 이틀 동안 프로젝트 범위와 네트워크 구성을 정리해 제출하고 강사 피드백을 반영했습니다.</p></div></li>
+          <li><span>02</span><div><b>네트워크 구현</b><p>부서별 VLAN, 주소 체계와 라우팅을 구성하고 본사·지사 구간의 기본 연결성을 확인했습니다.</p></div></li>
+          <li><span>03</span><div><b>ACL 구현·반복 검증</b><p>본사·지사·재택근무의 접근 기준을 장비 정책으로 변환하고 허용·차단 시나리오를 반복 테스트했습니다.</p></div></li>
+          <li><span>04</span><div><b>VPN·Dynamic NAT 협업</b><p>팀원과 함께 구성을 완성했습니다. 제 단독 기여로 강조하기보다 전체 네트워크 완성을 위한 협업 항목으로 구분했습니다.</p></div></li>
+          <li><span>05</span><div><b>통신 검증·최종 보고</b><p>전체 구성 완료 후 본사·지사 네트워크 시연 영상을 직접 제작하고, 테스트 결과를 최종보고서에 정리했습니다.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section-block ownership-section">
+      <p class="section-no">03 / MY ROLE</p>
+      <div>
+        <h2>기여도를 정확하게 구분했습니다.</h2>
+        <div class="ownership-grid">
+          <article class="primary-role"><small>핵심 담당</small><h3>ACL 정책·검증</h3><ul><li>본사·지사 접근 기준 정리</li><li>ACL 규칙과 적용 방향 설정</li><li>허용·차단 시나리오 반복 테스트</li><li>본사·지사 시연 영상 제작</li></ul></article>
+          <article><small>구축 참여</small><h3>VLAN·Routing</h3><p>Packet Tracer에서 부서별 네트워크와 구간 연결을 구성하고 전체 통신 흐름을 확인했습니다.</p></article>
+          <article><small>팀 협업</small><h3>VPN·Dynamic NAT</h3><p>팀원과 함께 구성했습니다. 팀원이 더 큰 비중으로 수행한 영역이므로 공동 작업으로 표현했습니다.</p></article>
+          <article><small>역할 분담</small><h3>Server Infrastructure</h3><p>서버 구축은 다른 팀원이 담당했습니다. 저는 네트워크 관점에서 서버 연결과 접근 정책 검증에 집중했습니다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence-section">
+      <div class="evidence-copy">
+        <p class="section-no">04 / ARCHITECTURE</p>
+        <h2>본사·지사·재택근무를 하나의 테스트 환경으로 연결</h2>
+        <p>본사는 인사·개발·영업·재무·보안·서버 VLAN으로, 지사는 인사·영업·서버 VLAN으로 분리했습니다. 구성도를 기준으로 사용자와 서버 사이의 예상 통신 경로를 확인한 뒤 ACL을 적용했습니다.</p>
+        <div class="tags"><span>VLAN</span><span>Routing</span><span>OSPF</span><span>ACL</span><span>VPN</span><span>Dynamic NAT</span></div>
+      </div>
+      <figure><img src="assets/images/project-01/network.png" alt="Simmit Pay 본사와 지사 네트워크 구성도"><figcaption>Packet Tracer 네트워크 구성 및 구간별 연결 구조</figcaption></figure>
+    </section>
+
+    <section class="section-block acl-section">
+      <p class="section-no">05 / ACL POLICY</p>
+      <div>
+        <h2>업무 요구사항을 허용·차단 규칙으로 변환했습니다.</h2>
+        <div class="policy-table">
+          <div class="policy-head"><span>접근 주체</span><span>허용 서비스</span><span>정책 의도</span></div>
+          <div><b>일반 부서</b><span>WEB · FTP · DNS</span><p>업무에 필요한 공통 서비스만 허용</p></div>
+          <div><b>개발·재무·보안</b><span>DB</span><p>DB 사용이 필요한 부서로 접근 범위 제한</p></div>
+          <div><b>개발·보안</b><span>LOG</span><p>로그 확인 권한이 필요한 인원만 허용</p></div>
+          <div><b>본사 보안팀</b><span>본사·지사 관리 통신</span><p>관리와 장애 확인을 위한 예외 권한</p></div>
+          <div><b>기타 트래픽</b><span>DENY</span><p>정의되지 않은 접근은 기본 차단</p></div>
+        </div>
+        <blockquote>ACL은 규칙 하나의 순서나 적용 방향이 틀려도 필요한 통신까지 차단될 수 있었습니다. 기준표를 출발지·목적지·서비스 단위로 나누고, 한 경로씩 검증하며 문제를 좁혔습니다.</blockquote>
+      </div>
+    </section>
+
+    <section class="evidence-section reverse">
+      <div class="evidence-copy">
+        <p class="section-no">06 / TROUBLESHOOTING</p>
+        <h2>“연결된다”가 아니라<br>“정책대로 연결된다”를 확인</h2>
+        <p>통신 실패가 발생하면 라우팅 문제인지 ACL 문제인지 먼저 구분했습니다. 이후 출발지·목적지 주소, 인터페이스 방향, 규칙 순서와 서비스 포트를 차례로 대조했습니다.</p>
+        <ul class="check-list"><li>필요한 서비스의 정상 연결 확인</li><li>비인가 부서와 외부 접근 차단 확인</li><li>본사·지사·재택근무 시나리오별 재시험</li><li>성공과 실패 결과를 시연 영상으로 기록</li></ul>
+      </div>
+      <figure><img src="assets/images/project-01/acl-test.png" alt="ACL 정책 적용 후 통신 테스트 화면"><figcaption>ACL 정책 적용 후 허용·차단 통신 검증</figcaption></figure>
+    </section>
+
+    <section class="section-block result-section">
+      <p class="section-no">07 / RESULT</p>
+      <div>
+        <h2>테스트 과정을 재현 가능한 증거로 남겼습니다.</h2>
+        <div class="result-grid"><article><strong>2개</strong><span>본사·지사 시연 영상 직접 제작</span></article><article><strong>3개 환경</strong><span>본사·지사·재택근무 통신 검증</span></article><article><strong>ACL</strong><span>부서·서비스별 최소 권한 적용</span></article></div>
+        <div class="learning"><small>LEARNING</small><p>ACL은 명령어를 입력하는 작업이 아니라 업무 흐름을 접근 통제 정책으로 변환하는 작업임을 배웠습니다. 또한 정상 연결뿐 아니라 실패해야 하는 경로까지 확인해야 정책의 정확성을 설명할 수 있다는 점을 체득했습니다.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 NJGNET</span><a href="project-02.html">다음 프로젝트 →</a></footer>
+</body>
+</html>

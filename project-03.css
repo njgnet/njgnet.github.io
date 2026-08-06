@@ -1,0 +1,75 @@
+body{background:#f7f7f5}
+.project03-page{width:min(1160px,90vw)}
+.back{display:inline-block;margin-bottom:28px;color:#666;font-size:13px;text-decoration:none}
+.p3-cover{padding-top:58px}
+.p3-cover h1{font-size:clamp(76px,12vw,150px);color:#111}
+.p3-cover .hero-subtitle{max-width:950px}
+.p3-summary{max-width:860px;margin-top:28px;color:#5d5d5d;font-size:17px;line-height:1.85}
+.p3-role-grid{display:grid;grid-template-columns:repeat(2,1fr);margin-top:42px;border-top:1px solid #111;border-left:1px solid #d9d9d5}
+.p3-role-grid article{min-height:310px;padding:32px;border-right:1px solid #d9d9d5;border-bottom:1px solid #d9d9d5;background:#fff}
+.p3-role-grid .primary-role{color:#fff;background:#151d3e}
+.p3-role-grid small{color:#315efb;font-size:10px;letter-spacing:.13em}
+.p3-role-grid .primary-role small{color:#91aaff}
+.p3-role-grid h3{margin:17px 0;font-size:28px}
+.p3-role-grid p,.p3-role-grid li{color:#666;line-height:1.75}
+.p3-role-grid .primary-role p,.p3-role-grid .primary-role li{color:#d8dceb}
+.role-proof{width:min(780px,100%);margin:34px 0 0;padding:12px;background:#fff;border:1px solid #d9d9d5}
+.role-proof img{display:block;width:100%}
+.role-proof figcaption,.wide-proof figcaption,.report-pair figcaption,.malware-evidence figcaption{padding-top:10px;color:#777;font-size:11px}
+.p3-starting-point>div{padding:36px;background:#eceee9;border-left:3px solid #315efb}
+.p3-starting-point p{max-width:850px}
+.p3-vuln-list{margin-top:42px;border-top:1px solid #111}
+.p3-vuln-list article{display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid #d9d9d5}
+.p3-vuln-list article>span{color:#315efb;font-size:11px}
+.p3-vuln-list article>div{display:grid;grid-template-columns:minmax(150px,190px) minmax(0,1fr);gap:24px}
+.p3-vuln-list b{font-size:19px}
+.p3-vuln-list p{margin:0;color:#666;line-height:1.7}
+.wide-proof{margin:40px 0 0;padding:14px;background:#fff;border:1px solid #d9d9d5}
+.wide-proof img{display:block;width:100%}
+.p3-script{padding:62px 48px;background:#eef2ff;border-top:2px solid #315efb;border-bottom:1px solid #ced8fa}
+.p3-script>div>p{max-width:850px}
+.script-policy{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:34px 0;background:#cbd3ef;border:1px solid #cbd3ef}
+.script-policy article{display:flex;flex-direction:column;gap:7px;padding:28px;background:#fff}
+.script-policy strong{color:#315efb;font-size:34px}
+.script-policy span{color:#666;font-size:13px}
+.report-pair{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:42px}
+.report-pair figure,.malware-evidence figure{margin:0;padding:13px;background:#fff;border:1px solid #d9d9d5}
+.report-pair img,.malware-evidence img{display:block;width:100%;object-fit:contain}
+.malware-evidence{display:grid;grid-template-columns:.82fr 1.18fr;gap:18px;margin-top:40px}
+.p3-presentation>div>p{max-width:850px}
+.presentation-preview{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(0,1.05fr);gap:34px;align-items:center;margin-top:42px;padding:24px;color:#111;background:#ecece8;border:1px solid #d4d4cf;text-decoration:none}
+.presentation-preview figure{margin:0;padding:10px;background:#fff;border:1px solid #cfcfca;box-shadow:0 10px 26px rgba(20,25,35,.12)}
+.presentation-preview img{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#fff}
+.presentation-preview small{color:#315efb;font-size:10px;font-weight:700;letter-spacing:.13em}
+.presentation-preview h3{margin:14px 0;font-size:28px;line-height:1.35}
+.presentation-preview p{color:#666;line-height:1.75}
+.presentation-preview b{display:inline-block;margin-top:18px;border-bottom:1px solid #111;font-size:13px}
+.p3-demo{padding:62px 48px;color:#fff;background:#151d3e}
+.p3-demo .section-no{color:#91aaff}
+.p3-demo>div>p{max-width:850px;color:#d8dceb}
+.demo-video{display:grid;grid-template-columns:.65fr 1.35fr;gap:25px;margin-top:36px;padding:22px;color:#111;background:#fff}
+.demo-video small{color:#315efb;font-size:10px;letter-spacing:.12em}
+.demo-video h3{margin:16px 0;font-size:27px;line-height:1.35}
+.demo-video p{color:#666;line-height:1.7}
+.demo-video a{display:inline-block;margin-top:18px;color:#111;font-size:13px;font-weight:700;text-decoration:none}
+.demo-video video{width:100%;aspect-ratio:16/9;background:#111}
+.p3-file-list{margin-top:45px;border-top:1px solid #111}
+.p3-file-list a{display:grid;grid-template-columns:55px 1fr auto;gap:20px;padding:20px 0;color:#111;border-bottom:1px solid #d9d9d5;text-decoration:none}
+.p3-file-list span{color:#315efb;font-size:11px}
+.p3-file-list b{font-size:18px}
+.p3-file-list small{color:#777}
+@media(max-width:820px){
+  .p3-role-grid,.report-pair,.malware-evidence,.presentation-preview,.demo-video{grid-template-columns:1fr}
+  .p3-vuln-list article{grid-template-columns:32px minmax(0,1fr)}
+  .p3-vuln-list article>div{grid-template-columns:1fr;gap:8px}
+  .script-policy{grid-template-columns:1fr}
+  .p3-script,.p3-demo{padding:42px 24px}
+}
+@media(max-width:480px){
+  .project03-page{width:88vw}
+  .p3-cover h1{font-size:62px}
+  .p3-role-grid article{padding:24px}
+  .p3-file-list a{grid-template-columns:32px 1fr}
+  .p3-file-list small{grid-column:2}
+  .demo-video{padding:14px}
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="남재근의 CTF, OWASP Juice Shop, 창작 워게임 활동 기록">
+<title>보안 활동 | 남재근</title>
+<link rel="stylesheet" href="style.css?v=10"><link rel="stylesheet" href="challenge.css?v=2">
+</head>
+<body>
+<header class="header"><a class="logo" href="index.html">NJG<span>NET</span></a><nav><a href="index.html#about">소개</a><a href="projects.html">프로젝트</a><a class="active" href="activities.html">보안 활동</a><a href="learning.html">학습 기록</a><a href="awards.html">수상</a></nav></header>
+<main class="subpage activity-page">
+<a class="back" href="index.html">← 홈</a>
+<section class="page-title"><p class="kicker">CTF · WEB SECURITY · WAR GAME</p><h1>보안 활동</h1><p>정규 프로젝트와는 별도로 진행한 CTF, Juice Shop 실습, 창작 워게임을 모았습니다.</p></section>
+
+<section class="activity-award-hero" id="wargame-award">
+<div class="activity-award-copy"><p class="challenge-label">수상 성과</p><h2>창작 워게임 대회 1등</h2><p>6팀 <code>::6</code>으로 참가해 모든 문제를 해결했고, 실시간 순위 100%로 1등을 기록했습니다. 저는 팀에서 Challenge 09와 10 제작을 맡았습니다.</p><div class="document-links"><a class="doc-button" href="#wargame">워게임 제작 기록 보기</a><a class="doc-button secondary" href="assets/docs/learning/wargame-award.pdf" target="_blank" rel="noopener">상장 PDF 보기</a></div></div>
+<div class="award-image-frame"><img src="assets/images/learning/wargame-award.png" alt="창작 워게임 대회 1등 상장"></div>
+</section>
+
+<nav class="activity-jump"><a href="#ctf">팀별 CTF</a><a href="#juice-shop">Juice Shop</a><a href="#wargame">창작 워게임</a></nav>
+
+<section class="challenge-story" id="ctf">
+<div class="challenge-story-head"><div><p class="challenge-label">2026.05.27 · 2팀</p><h3>팀별 CTF 제작 및 모의해킹 대회</h3><p>팀별로 문제를 만든 뒤 서로의 CTF를 풀어보는 방식이었습니다. 저희 2팀은 EasyHajo 문제를 준비했고, 대회에서는 14개 플래그를 찾아 5등으로 마무리했습니다.</p></div><div class="challenge-result"><b>5등</b><span>2팀 · 14 FLAGS</span></div></div>
+<img class="challenge-wide-image" src="assets/images/learning/ctf-competition.png" alt="2026년 5월 27일 팀별 CTF 대회 결과">
+<div class="challenge-columns"><div><h4>EasyHajo 문제 구성</h4><p>서비스와 포트를 확인한 뒤 숨겨진 경로와 백업 파일을 찾고, 쿠키 우회와 파일 업로드를 거쳐 리버스 셸을 확보하도록 구성했습니다. 이후 명령어 삽입과 계정 정보 확인, 권한 상승으로 root 플래그까지 이어지는 흐름입니다.</p></div><div><h4>대회 후 정리</h4><p>문제를 푸는 데서 끝내지 않고 출제 의도와 풀이 순서를 따로 문서화했습니다. 어떤 단서를 보고 다음 단계로 넘어가는지 다시 정리하면서 출제자와 풀이자 양쪽 관점으로 돌아볼 수 있었습니다.</p><div class="document-links"><a class="doc-button" href="assets/docs/learning/easyhajo-intent.pdf" target="_blank" rel="noopener">문제 출제 의도 PDF</a><a class="doc-button secondary" href="assets/docs/learning/easyhajo-walkthrough.pdf" target="_blank" rel="noopener">워크스루 PDF</a></div></div></div>
+</section>
+
+<section class="challenge-story" id="juice-shop">
+<div class="challenge-story-head"><div><p class="challenge-label">2026.06.26 - 07.05</p><h3>OWASP Juice Shop 취약점 실습</h3><p>Juice Shop에 직접 접속해 취약점을 찾고 Burp Suite로 요청값을 확인·수정했습니다. 성공 화면만 모은 것이 아니라 공격이 가능한 이유와 막는 방법까지 보고서에 정리했습니다.</p></div><div class="challenge-result"><b>3개</b><span>집중 분석</span></div></div>
+<div class="juice-shot-grid">
+<figure><img src="assets/images/learning/juice-login.png" alt="Juice Shop 관리자 로그인 우회 전후 화면"><figcaption><b>Login Admin</b><span>SQL Injection으로 관리자 인증이 우회되는지 확인했습니다.</span></figcaption></figure>
+<figure><img src="assets/images/learning/juice-zero-stars.png" alt="Burp Suite에서 별점 요청값을 1에서 0으로 변경한 화면"><figcaption><b>Zero Stars</b><span>요청 본문의 rating 값을 1에서 0으로 바꿔 서버의 입력값 검증을 확인했습니다.</span></figcaption></figure>
+<figure><img src="assets/images/learning/juice-admin-registration.png" alt="회원가입 요청에 관리자 role 값을 추가한 화면"><figcaption><b>Admin Registration</b><span>회원가입 요청에 role 값을 넣어 Mass Assignment 문제를 확인했습니다.</span></figcaption></figure>
+<figure><img src="assets/images/learning/juice-scoreboard.png" alt="Juice Shop 점수판 진행 및 복구 화면"><figcaption><b>실습 기록 복구</b><span>DHCP로 주소가 바뀌며 기록이 사라졌고, 이전 IP로 다시 설정해 두 번째 기록을 복구했습니다.</span></figcaption></figure>
+</div>
+<div class="experience-note"><h4>실습하면서 남은 경험</h4><p>기록이 두 번 사라졌을 때 처음에는 다시 풀어야 한다고 생각했습니다. 두 번째에는 멘토님께 상황을 여쭤보고, 서버가 사용하던 이전 DHCP 주소로 IP를 고정한 뒤 재부팅해 기록을 되살렸습니다. 취약점 풀이뿐 아니라 실습 환경의 주소와 데이터가 어떻게 연결되는지도 직접 확인한 경험이었습니다.</p></div>
+<div class="document-links"><a class="doc-button" href="assets/docs/learning/juice-shop-report.pdf" target="_blank" rel="noopener">Juice Shop 보고서 PDF 보기</a></div>
+</section>
+
+<section class="challenge-story" id="wargame">
+<div class="challenge-story-head"><div><p class="challenge-label">2026.07.16 · 6팀</p><h3>창작 워게임 문제 제작과 대회</h3><p>한 팀원이 서버 통합을 맡았고, 나머지 팀원들은 Challenge 01부터 10까지 문제를 나누어 만들었습니다. 저는 Challenge 09와 10을 맡아 공통 구조에 맞춰 문제 파일을 준비했습니다.</p></div><div class="challenge-result first"><b>1등</b><span>::6 · 100%</span></div></div>
+<div class="wargame-image-grid"><figure><img src="assets/images/learning/wargame-types.png" alt="워게임 문제 유형과 담당자 표"><figcaption>Challenge 09·10은 제가 담당했습니다.</figcaption></figure><figure><img src="assets/images/learning/wargame-structure.png" alt="워게임 공통 디렉터리 구조"><figcaption>각 팀원이 만든 문제를 challenge01~10 디렉터리에 합치는 구조입니다.</figcaption></figure></div>
+<div class="my-challenges"><div><span>CHALLENGE 09</span><h4>Deprecated Interface</h4><p>보안 설정 오류를 주제로, 더 이상 권장되지 않는 인터페이스가 남아 있을 때 생기는 문제를 풀이 흐름으로 구성했습니다.</p></div><div><span>CHALLENGE 10</span><h4>Legacy Typosquatting</h4><p>공급망 공격을 주제로, 정상 패키지와 비슷한 이름을 이용하는 Typosquatting 상황을 문제로 구성했습니다.</p></div></div>
+<figure class="rank-proof"><img src="assets/images/learning/wargame-first-place.png" alt="6팀 ::6이 100퍼센트로 실시간 1등을 기록한 화면"><figcaption>대회 종료 직전 실시간 순위입니다. 왼쪽의 <code>::6</code>이 제가 속한 6팀이며, 전 문제를 해결해 100%로 1등을 기록했습니다.</figcaption></figure>
+<div class="document-links"><a class="doc-button" href="assets/docs/learning/wargame-award.pdf" target="_blank" rel="noopener">워게임 1등 상장 PDF 보기</a></div>
+</section>
+</main>
+<footer><span>© 2026 남재근 · NJGNET</span><a href="https://github.com/njgnet" target="_blank" rel="noopener">GitHub ↗</a></footer>
+</body></html>

@@ -1,0 +1,7 @@
+.learning-preview-grid{grid-template-columns:repeat(3,1fr)}
+.featured-project b,.award-preview-card small{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:10px 14px;border-radius:7px;background:#315efb;color:#fff;font-size:12px;font-weight:700}
+.featured-project b{justify-self:end}.award-preview-card.dark small{background:#fff;color:#24315e}
+.all-projects{padding:11px 16px!important;border:0!important;border-radius:7px;background:#151b36;color:#fff!important}
+.text-link{display:inline-flex;padding:11px 16px!important;border:0!important;border-radius:7px;background:#315efb;color:#fff!important;text-decoration:none!important;font-size:13px;font-weight:700}
+.award-preview-card{transition:transform .2s,border-color .2s}.award-preview-card:hover{transform:translateY(-4px);border-color:#315efb}
+@media(max-width:900px){.learning-preview-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.learning-preview-grid{grid-template-columns:1fr}.featured-project b{justify-self:start}}

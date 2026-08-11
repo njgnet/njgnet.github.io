@@ -75,6 +75,14 @@
       <footer>원본 PPT와 시연 영상 링크 · /project-01.html</footer>
     </section>
 
+    <section class="sheet retrospective-page">
+      <header class="page-head"><span>04D</span><div><p>1차 프로젝트 · 프로젝트를 마치고</p><h2>ACL 설정보다 통신 문제를 구간별로 확인하는 방법을 익혔습니다.</h2></div></header>
+      <div class="retrospective-lead"><h3>명령어 형식만 맞추는 것으로는 정책을 완성할 수 없었습니다.</h3><p>ACL을 적용하기 전에 누가 어느 서버의 어떤 서비스를 사용해야 하는지부터 정리해야 했습니다. 허용해야 하는 통신뿐 아니라 차단돼야 하는 접근이 실제로 막히는지도 함께 확인해야 했습니다.</p></div>
+      <div class="retrospective-steps"><article><span>01</span><div><small>어려웠던 점</small><h3>규칙 하나가 잘못되면 정상 통신까지 막혔습니다.</h3><p>ACL의 정책 순서와 적용 방향이 서로 영향을 주기 때문에 수정한 부분만 확인해서는 원인을 찾기 어려웠습니다.</p></div></article><article><span>02</span><div><small>해결 과정</small><h3>본사·지사·재택근무의 통신 기준을 먼저 정리했습니다.</h3><p>출발지와 목적지, 서비스, 인터페이스와 적용 방향을 나누고 허용·차단 항목을 하나씩 시험했습니다.</p></div></article><article><span>03</span><div><small>협업 방식</small><h3>서버 담당 팀원과 통신이 막히는 구간을 함께 확인했습니다.</h3><p>서버의 세부 구축은 다른 팀원이 담당했지만, 네트워크 관점에서 필요한 통신이 어느 구간까지 도달하는지 확인했습니다.</p></div></article><article><span>04</span><div><small>최종 검증</small><h3>VPN과 Dynamic NAT까지 포함한 전체 환경을 다시 시험했습니다.</h3><p>구축을 마친 뒤 본사와 지사의 통신 시나리오를 직접 테스트하고 시연 영상 2개를 제작했습니다.</p></div></article></div>
+      <div class="lesson"><b>배운 점</b><p>한 번에 여러 설정을 바꾸기보다 통신 경로를 구간별로 나누고, 정상 동작과 차단 결과를 함께 확인해야 문제의 원인을 더 정확하게 찾을 수 있다는 점을 배웠습니다.</p></div>
+      <footer>근거 자료 · ACL 정책 기준표 · 본사 및 지사 시연 영상 · 최종보고서</footer>
+    </section>
+
     <section class="sheet project-page">
       <header class="page-head"><span>05</span><div><p>2차 프로젝트 · 우수상</p><h2>Easy Hotel 취약점 분석과 시스템 점검</h2></div></header>
       <div class="metric-strip"><div><strong>6건</strong><span>웹 취약점 재현·조치</span></div><div><strong>67개</strong><span>시스템 점검 항목</span></div><div><strong>9 → 0</strong><span>조치 전후 취약 항목</span></div><div><strong>64장</strong><span>최종 통합보고서</span></div></div>
@@ -159,6 +167,14 @@
       <div class="deliverable-print large"><h3>최종 제출 자료</h3><ul><li>3차 프로젝트 최종 계획서</li><li>네트워크 구성도</li><li>모의해킹 결과보고서 45P</li><li>악성코드 분석 결과보고서</li><li>기업정보보호 결과보고서 21P</li><li>자동 차단 셸 스크립트</li><li>발표자료 56P</li><li>팀 제작 시연 영상</li></ul></div>
       <figure class="presentation-proof"><img src="assets/images/project-03/presentation-cover.png" alt="3차 프로젝트 발표자료 표지"><figcaption><b>3차 프로젝트 발표자료</b><span>프로젝트 전체 과정을 56장으로 직접 구성</span></figcaption></figure>
       <footer>원본 보고서·발표자료·영상 링크 · /project-03.html</footer>
+    </section>
+
+    <section class="sheet retrospective-page">
+      <header class="page-head"><span>11D</span><div><p>3차 프로젝트 · 프로젝트를 마치고</p><h2>팀원별 결과를 하나의 흐름으로 설명하는 과정이 가장 어려웠습니다.</h2></div></header>
+      <div class="retrospective-lead"><h3>네트워크, 웹 취약점과 관제 결과가 하나의 환경 안에서 연결됐습니다.</h3><p>같은 공격도 애플리케이션 코드, WAF, IDS와 관제 화면에서 보이는 정보가 달랐습니다. 각각의 결과를 나열하는 것만으로는 프로젝트 전체 과정이 잘 전달되지 않아 공격부터 조치와 재시험까지 흐름을 다시 확인했습니다.</p></div>
+      <div class="retrospective-steps"><article><span>01</span><div><small>어려웠던 점</small><h3>팀원들이 맡은 결과의 형식과 설명 순서가 서로 달랐습니다.</h3><p>화면과 로그만 모으면 무엇을 시도했고 어느 단계에서 탐지되거나 차단됐는지 한눈에 파악하기 어려웠습니다.</p></div></article><article><span>02</span><div><small>확인 과정</small><h3>각 결과의 공격 조건과 조치 내용을 다시 확인했습니다.</h3><p>팀원들에게 맡은 작업을 물어보고 자료를 살펴보며 애플리케이션, 보안 장비와 관제 로그가 어떻게 이어지는지 정리했습니다.</p></div></article><article><span>03</span><div><small>정리 방식</small><h3>목적 → 점검 → 발견 → 조치 → 재시험 순서로 맞췄습니다.</h3><p>기술 이름을 나열하기보다 어떤 문제가 있었고 무엇을 수정했으며 같은 조건으로 다시 시험했을 때 어떻게 달라졌는지를 중심으로 구성했습니다.</p></div></article><article><span>04</span><div><small>담당 결과</small><h3>팀 산출물을 바탕으로 56장 발표자료 전체를 작성했습니다.</h3><p>계획서부터 구성도, 취약점, 탐지·차단, 로그, 악성파일 분석과 셸 스크립트까지 발표 가능한 순서로 다시 구성했습니다.</p></div></article></div>
+      <div class="lesson"><b>배운 점</b><p>기술을 구현하는 것과 그 과정을 다른 사람이 이해할 수 있도록 설명하는 것은 별개의 일이었습니다. 전체 흐름을 설명하려면 제가 맡은 부분뿐 아니라 각 결과가 서로 어떻게 연결되는지도 이해해야 한다는 점을 배웠습니다.</p></div>
+      <footer>근거 자료 · 최종 보고서 · 56장 발표자료 · 팀 제작 시연 영상</footer>
     </section>
 
     <section class="sheet activities-page">

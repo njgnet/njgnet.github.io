@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="남재근 보안 인프라 포트폴리오 A4 출력본">
   <title>남재근 | 포트폴리오 PDF</title>
-  <link rel="stylesheet" href="portfolio-pdf.css?v=3">
+  <link rel="stylesheet" href="portfolio-pdf.css?v=4">
 </head>
 <body>
   <div class="print-toolbar">
@@ -119,6 +119,14 @@
       <div class="deliverable-print"><h3>최종 제출 자료</h3><ul><li>프로젝트 계획서</li><li>모의해킹 결과보고서</li><li>시스템 점검보고서</li><li>시스템 점검 셸 스크립트</li><li>64장 최종 통합보고서</li><li>cron 터미널 출력 테스트 영상</li></ul></div>
       <div class="award-summary"><img src="assets/images/project-02/award.png" alt="2차 프로젝트 우수상"><div><small>RESULT</small><h3>2차 프로젝트 1위 · 우수상</h3><p>취약점 재현과 보안 조치, 시스템 점검 및 문서 결과를 팀원들과 함께 완성해 우수상을 받았습니다.</p></div></div>
       <footer>팀 협업 범위 · 네트워크·방화벽·웹·DB·관제 환경은 역할을 나누어 구축</footer>
+    </section>
+
+    <section class="sheet retrospective-page">
+      <header class="page-head"><span>09C</span><div><p>2차 프로젝트 · 프로젝트를 마치고</p><h2>완성된 결과보다 막힌 부분을 풀어가는 과정이 더 기억에 남았습니다.</h2></div></header>
+      <div class="retrospective-lead"><h3>웹 코드와 운영체제 설정까지 확인 범위가 넓어졌습니다.</h3><p>1차 프로젝트에서는 네트워크 연결과 ACL에 집중했다면, 2차 프로젝트에서는 취약한 웹 코드와 Ubuntu 시스템 설정을 함께 확인했습니다. 취약 코드 초안을 실제 환경에 적용한 뒤 공격이 발생하는 이유를 분석하고, 코드를 수정한 다음 같은 입력으로 다시 시험해 차단되는지 확인했습니다.</p></div>
+      <div class="retrospective-steps"><article><span>01</span><div><small>어려웠던 점</small><h3>67개 점검 항목을 같은 형식으로 합칠 기준이 없었습니다.</h3><p>팀원들이 항목을 나누어 작성하기 전에 출력 형식, 결과 집계 방식과 실행 순서를 먼저 맞춰야 했습니다.</p></div></article><article><span>02</span><div><small>해결 과정</small><h3>멘토님의 피드백을 받고 초기 틀부터 시험했습니다.</h3><p>공통 출력 함수와 집계 방식을 먼저 실행해 결과 화면을 캡처한 뒤 팀원들에게 보여주며 작업 방향을 제안했습니다.</p></div></article><article><span>03</span><div><small>추가 제안</small><h3>예약 실행 결과를 활성 Ubuntu 터미널에 보여주는 방식을 시험했습니다.</h3><p>최종 운영 방식으로 채택되지는 않았지만 직접 동작하는지 확인했고, 결과가 화면에 나타나는 과정을 시연 영상으로 남겼습니다.</p></div></article><article><span>04</span><div><small>재검증 결과</small><h3>양호 58개·취약 9개에서 67개 전체 양호까지 확인했습니다.</h3><p>설정을 수정한 뒤 같은 스크립트를 다시 실행해 조치 전후 결과가 달라졌는지 확인했습니다.</p></div></article></div>
+      <div class="lesson"><b>배운 점</b><p>아이디어를 제안하는 데서 끝내지 않고 실제 환경에서 구현해 본 뒤 정상적으로 동작하는지 확인하는 과정이 중요하다는 것을 배웠습니다. 또한 결과만 완성하는 것보다 막힌 부분을 어떤 순서로 나누어 확인하고 해결할지가 중요하다는 점을 느꼈습니다.</p></div>
+      <footer>근거 자료 · 초기 점검 결과 캡처 · 조치 전후 점검 화면 · cron 터미널 출력 시연 영상</footer>
     </section>
 
     <section class="sheet project-page">

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Eazy Hotel 통합 보안 관제, 취약점 분석, 시스템 점검 스크립트 프로젝트">
   <title>Project 02 — NJGNET</title>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <link rel="stylesheet" href="project.css?v=3">
-  <link rel="stylesheet" href="project-02.css?v=6">
+  <link rel="stylesheet" href="project-02.css?v=7">
 </head>
 <body>
   <header class="header">
@@ -110,6 +110,12 @@
       <div>
         <h2>67개 점검 항목의 공통 틀을 만들었습니다.</h2>
         <p>시스템 점검은 KISA 주요정보통신기반시설 취약점 분석·평가 가이드를 참고했습니다. 멘토님 피드백을 받은 뒤, 팀원들이 항목별 함수를 나누어 작성하기 전에 결과 형식과 집계 방식부터 맞출 필요가 있다고 생각했습니다.</p>
+        <div class="process-story" aria-label="점검 스크립트 문제 해결 과정">
+          <article><small>어려웠던 점</small><h3>67개 항목을 합칠 공통 기준이 없었습니다.</h3><p>팀원들이 항목별 함수를 나누어 작성하기 전에 출력 형식과 결과 집계 방식이 먼저 정해져야 했습니다.</p></article>
+          <article><small>접근 방법</small><h3>멘토 피드백을 바탕으로 초기 틀부터 시험했습니다.</h3><p>AI로 초안을 잡은 뒤 Ubuntu에서 명령어와 경로를 하나씩 확인하고, U-01부터 U-67까지 실행되는 형태를 먼저 만들었습니다.</p></article>
+          <article><small>공유·검증</small><h3>실행 화면을 캡처해 팀원들에게 먼저 보여줬습니다.</h3><p>양호·취약 개수가 한 화면에 집계되는 결과를 공유하고, 각자 작성한 항목을 같은 형식으로 합치는 방향을 제안했습니다.</p></article>
+          <article><small>확인 결과</small><h3>조치 전 9개 취약 항목을 조치 후 다시 시험했습니다.</h3><p>첫 실행의 양호 58개·취약 9개 결과를 기준으로 설정을 수정한 뒤, 재점검에서 67개 전체가 양호로 표시되는 것을 확인했습니다.</p></article>
+        </div>
         <div class="script-origin">
           <small>제가 먼저 만든 초기 틀</small>
           <h3>AI를 활용해 초안을 만들고, 실제 Ubuntu에서 67개 점검 결과가 나오는지 먼저 시험했습니다.</h3>

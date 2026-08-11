@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="남재근 보안 인프라 포트폴리오 A4 출력본">
+  <title>남재근 | 포트폴리오 PDF</title>
+  <link rel="stylesheet" href="portfolio-pdf.css?v=2">
+</head>
+<body>
+  <div class="print-toolbar">
+    <a href="index.html">← 포트폴리오로 돌아가기</a>
+    <p>A4 세로 · 배경 그래픽을 켜고 저장하면 화면과 같은 형태로 출력됩니다.</p>
+    <button type="button" onclick="window.print()">PDF로 저장·인쇄</button>
+  </div>
+
+  <main class="print-document">
+    <section class="sheet cover">
+      <div class="cover-top"><span>NJGNET</span><span>SECURITY · NETWORK · INFRASTRUCTURE</span></div>
+      <div class="cover-main">
+        <p class="eyebrow">보안 인프라 포트폴리오</p>
+        <h1>남재근</h1>
+        <h2>구축한 환경이 실제로 동작하는지<br>끝까지 확인합니다.</h2>
+        <p>네트워크 구성, 접근통제, 웹 취약점 분석과 시스템 점검을 경험했습니다. 설정을 적용하는 데서 끝내지 않고 직접 시험하며 문제의 원인을 찾는 과정을 중요하게 생각합니다.</p>
+      </div>
+      <dl class="cover-facts"><div><dt>교육</dt><dd>가디언즈 정보보호 및 보안 인프라 운영 관리</dd></div><div><dt>프로젝트</dt><dd>팀 프로젝트 3회</dd></div><div><dt>수상</dt><dd>2차 프로젝트 우수상 · 창작 워게임 팀 1위</dd></div><div><dt>Web</dt><dd>https://njgnet.github.io/</dd></div></dl>
+      <footer>남재근 · 보안관제 / 보안 인프라 운영 지원</footer>
+    </section>
+
+    <section class="sheet overview">
+      <header class="page-head"><span>01</span><div><p>PROFILE & RESULTS</p><h2>경험을 숫자로 정리했습니다.</h2></div></header>
+      <div class="metric-grid"><article><strong>3회</strong><span>완료한 팀 프로젝트</span></article><article><strong>2개</strong><span>1차 본사·지사 시연 영상</span></article><article><strong>67개</strong><span>Ubuntu 시스템 점검 항목</span></article><article><strong>56장</strong><span>직접 구성한 3차 발표자료</span></article></div>
+      <div class="award-row"><figure><img src="assets/images/project-02/award.png" alt="2차 프로젝트 우수상 상장"><figcaption><b>2차 프로젝트 우수상</b><span>취약점 분석·시스템 점검 프로젝트</span></figcaption></figure><figure><img src="assets/images/learning/wargame-award.png" alt="창작 워게임 1등 상장"><figcaption><b>창작 워게임 팀 1위</b><span>Challenge 09·10 제작 및 전 문제 해결</span></figcaption></figure></div>
+      <div class="profile-copy"><h3>문제를 구간별로 나누어 확인합니다.</h3><p>예상과 다른 결과가 나오면 한 번에 여러 설정을 바꾸기보다 연결 상태, 적용 위치, 정책 순서와 서비스 조건을 나누어 원인을 찾았습니다. 조치 후에는 같은 조건으로 다시 시험해 결과가 달라졌는지 확인했습니다.</p></div>
+      <footer>남재근 보안 인프라 포트폴리오</footer>
+    </section>
+
+    <section class="sheet project-page">
+      <header class="page-head"><span>02</span><div><p>1차 프로젝트</p><h2>SIMMIT PAY 네트워크 구축</h2></div></header>
+      <div class="project-intro"><div><h3>Packet Tracer 기반 통합 인프라와 ACL 정책 검증</h3><p>본사와 지사 네트워크를 연결하고 VLAN과 라우팅을 확인한 뒤 ACL을 적용했습니다. VPN과 Dynamic NAT는 팀원과 협업했으며, 저는 ACL 설정과 전체 통신 검증에 가장 집중했습니다.</p></div><dl><div><dt>핵심 담당</dt><dd>ACL 정책·통신 테스트</dd></div><div><dt>검증 범위</dt><dd>본사·지사·재택근무 3개 환경</dd></div><div><dt>증거 자료</dt><dd>본사·지사 시연 영상 2개</dd></div></dl></div>
+      <figure class="wide-image"><img src="assets/images/project-01/network.png" alt="SIMMIT PAY 네트워크 구성도"><figcaption>본사·지사 및 서비스 구간을 분리한 Packet Tracer 네트워크</figcaption></figure>
+      <div class="story-grid"><article><small>어려웠던 점</small><h3>정책 한 줄로 정상 통신까지 차단됐습니다.</h3><p>처음에는 통신이 되지 않을 때마다 ACL부터 수정해 원인을 구분하기 어려웠습니다.</p></article><article><small>확인 방식</small><h3>통신 구간과 조건을 하나씩 분리했습니다.</h3><p>ACL을 제외한 기본 라우팅, 적용 인터페이스와 방향, 규칙 순서, IP와 서비스 포트를 차례대로 확인했습니다.</p></article></div>
+      <footer>상세 페이지 · /project-01.html</footer>
+    </section>
+
+    <section class="sheet evidence-page">
+      <header class="page-head"><span>03</span><div><p>1차 프로젝트 · 검증</p><h2>허용과 차단을 함께 확인했습니다.</h2></div></header>
+      <div class="image-pair"><figure><img src="assets/images/project-01/troubleshooting.png" alt="ACL 문제 해결 과정"><figcaption>문제 구간을 분리해 확인한 시행착오</figcaption></figure><figure><img src="assets/images/project-01/resolution.png" alt="ACL 해결 결과"><figcaption>설정 수정 후 구간별 재시험 결과</figcaption></figure></div>
+      <ol class="numbered-process"><li><b>기본 연결성</b><span>ACL을 제외했을 때 라우팅과 인터페이스가 정상인지 확인</span></li><li><b>적용 위치</b><span>인터페이스의 inbound·outbound 방향 확인</span></li><li><b>규칙 순서</b><span>필요한 permit보다 넓은 deny가 먼저 평가되는지 점검</span></li><li><b>서비스 단위</b><span>Ping, WEB, FTP, DNS, DB, LOG를 개별 시험</span></li><li><b>반대 조건</b><span>허용 대상은 연결되고 비인가 대상은 실패하는지 함께 검증</span></li></ol>
+      <div class="quote-box"><b>배운 점</b><p>ACL 명령어 자체보다 통신 문제를 한 구간씩 나누어 확인하는 방법을 더 많이 익혔습니다. 서버 구축은 제 담당이 아니었지만, 필요한 통신이 각 서버까지 도달하는지 확인하고 서버 담당 팀원과 막히는 구간을 함께 찾았습니다.</p></div>
+      <footer>시연 영상 · GitHub Release의 본사·지사 영상 링크 참조</footer>
+    </section>
+
+    <section class="sheet project-page">
+      <header class="page-head"><span>04</span><div><p>2차 프로젝트 · 우수상</p><h2>Easy Hotel 취약점 분석과 시스템 점검</h2></div></header>
+      <div class="metric-strip"><div><strong>6건</strong><span>웹 취약점 재현·조치</span></div><div><strong>67개</strong><span>시스템 점검 항목</span></div><div><strong>9 → 0</strong><span>조치 전후 취약 항목</span></div><div><strong>64장</strong><span>최종 통합보고서</span></div></div>
+      <figure class="wide-image compact"><img src="assets/images/project-02/pentest-summary.png" alt="2차 프로젝트 취약점 요약"><figcaption>모의해킹 결과보고서에 정리한 6개 취약점</figcaption></figure>
+      <div class="story-grid"><article><small>취약점 검증</small><h3>공격 조건을 만들고 조치 후 같은 방법으로 재시험했습니다.</h3><p>AI를 활용해 취약 코드 초안을 구성했지만 그대로 사용하지 않고, 실제 환경에서 공격이 재현되는 이유와 코드 변경 후 차단 여부를 확인했습니다.</p></article><article><small>문서 작성</small><h3>모의해킹 결과와 시스템 점검 내용을 정리했습니다.</h3><p>취약점의 원인, 재현 조건과 조치 결과를 모의해킹 결과보고서에 정리하고 시스템 점검·최종보고서 작성에도 참여했습니다.</p></article></div>
+      <footer>상세 페이지 · /project-02.html</footer>
+    </section>
+
+    <section class="sheet process-page">
+      <header class="page-head"><span>05</span><div><p>2차 프로젝트 · 문제 해결 과정</p><h2>점검 스크립트의 틀을 먼저 시험했습니다.</h2></div></header>
+      <div class="four-steps"><article><span>01</span><b>어려웠던 점</b><p>67개 항목을 나누어 작성하기 전에 공통 출력 형식과 집계 기준이 필요했습니다.</p></article><article><span>02</span><b>초기 틀 제작</b><p>멘토님의 피드백을 바탕으로 AI로 초안을 잡고 Ubuntu에서 명령어와 경로를 직접 확인했습니다.</p></article><article><span>03</span><b>팀 공유</b><p>U-01~U-67 실행 결과가 한 화면에 집계되는 형태를 캡처해 팀원들에게 먼저 보여줬습니다.</p></article><article><span>04</span><b>재검증</b><p>양호 58개·취약 9개에서 설정을 수정한 뒤 67개 전체 양호를 확인했습니다.</p></article></div>
+      <div class="image-pair checks"><figure><img src="assets/images/project-02/check-before.png" alt="조치 전 시스템 점검"><figcaption>조치 전 · 양호 58 / 취약 9</figcaption></figure><figure><img src="assets/images/project-02/check-after.png" alt="조치 후 시스템 점검"><figcaption>조치 후 · 67개 전체 양호</figcaption></figure></div>
+      <div class="quote-box"><b>제가 먼저 보여준 부분</b><p>점검 함수의 형태와 결과 집계 방식을 먼저 실행해 본 뒤 “이런 방식으로 합치면 될 것 같다”고 공유했습니다. 각 팀원이 작성한 항목을 같은 형식에 넣을 수 있도록 공통 출력 함수와 실행 순서를 정리했습니다.</p></div>
+      <footer>근거 자료 · 시스템 점검보고서 및 점검 스크립트</footer>
+    </section>
+
+    <section class="sheet process-page">
+      <header class="page-head"><span>06</span><div><p>2차 프로젝트 · 제안과 검증</p><h2>채택 여부와 별개로 직접 동작까지 확인했습니다.</h2></div></header>
+      <div class="proposal-print"><div><p class="eyebrow">CRON · TTY OUTPUT TEST</p><h3>예약 실행 결과를 활성화된 Ubuntu 터미널에서 바로 확인하는 방식</h3><p>점검 결과를 로그 파일에 저장하는 것에 더해, 관리자가 별도 명령어를 입력하지 않아도 현재 열려 있는 터미널에서 결과를 확인할 수 있으면 좋겠다고 생각했습니다.</p><p>실행 시간을 지정하고 활성 터미널로 결과를 보내는 방법을 직접 시험했습니다. 팀의 최종 운영 방식으로 채택되지는 않았지만, 화면에 결과가 나타나는 과정까지 확인해 시연 영상으로 남겼습니다.</p><a href="https://github.com/njgnet/njgnet.github.io/releases/download/project-02-assets/project-02-cron-live-demo.mp4">시연 영상 열기 ↗</a></div><figure><img src="assets/images/project-02/cron-report.png" alt="cron 자동화 보고서"><figcaption>cron 정기 실행 및 로그 저장 내용</figcaption></figure></div>
+      <div class="lesson"><b>이 경험에서 중요했던 점</b><p>제안이 최종 결과물에 포함됐다는 식으로 과장하지 않았습니다. 아이디어를 말하는 데서 끝내지 않고 실제 환경에서 구현하고, 정상적으로 동작하는지 영상으로 남긴 과정 자체를 제 경험으로 정리했습니다.</p></div>
+      <footer>영상 링크는 PDF에서도 클릭할 수 있습니다.</footer>
+    </section>
+
+    <section class="sheet project-page">
+      <header class="page-head"><span>07</span><div><p>3차 프로젝트</p><h2>PrivaDrive 기업 정보보호 진단</h2></div></header>
+      <div class="metric-strip three"><div><strong>7종</strong><span>웹 취약점 점검</span></div><div><strong>4종</strong><span>악성파일 분석 도구</span></div><div><strong>56장</strong><span>직접 작성한 발표자료</span></div></div>
+      <figure class="wide-image"><img src="assets/images/project-03/infrastructure.png" alt="PrivaDrive 인프라 구성도"><figcaption>External·Boundary·DMZ·SOC 구간으로 구성한 기업 인프라</figcaption></figure>
+      <div class="story-grid"><article><small>취약점 조치</small><h3>공격 결과와 발생 조건을 확인하고 조치 과정에 참여했습니다.</h3><p>애플리케이션 코드와 보안 설정에서 수정할 부분을 정리하고, 조치 후 재시험 결과를 확인했습니다.</p></article><article><small>발표자료 단독 작성</small><h3>팀 산출물을 56장 발표 흐름으로 다시 구성했습니다.</h3><p>계획서, 구성도, 모의해킹, 탐지·차단, 로그와 악성코드 분석 결과를 목적→점검→발견→조치 순서로 정리했습니다.</p></article></div>
+      <footer>상세 페이지 · /project-03.html</footer>
+    </section>
+
+    <section class="sheet activities-page">
+      <header class="page-head"><span>08</span><div><p>보안 실습과 대회</p><h2>문제를 만들고 직접 풀어봤습니다.</h2></div></header>
+      <div class="activity-list"><article><figure><img src="assets/images/learning/ctf-competition.png" alt="CTF 대회 화면"></figure><div><small>TEAM CTF</small><h3>문제 출제 의도와 워크스루 작성</h3><p>2팀 EasyHajo로 참가해 14개 플래그를 획득하고 팀 5위를 기록했습니다.</p></div></article><article><figure><img src="assets/images/learning/juice-scoreboard.png" alt="OWASP Juice Shop 실습 화면"></figure><div><small>OWASP JUICE SHOP</small><h3>요청값이 서버에서 처리되는 과정을 확인</h3><p>관리자 인증 우회, 별점 요청값 변조와 관리자 권한 필드 추가를 실습하고 원인과 대책을 보고서로 작성했습니다.</p></div></article><article><figure><img src="assets/images/learning/wargame-first-place.png" alt="워게임 1위 화면"></figure><div><small>CREATIVE WARGAME</small><h3>Challenge 09·10 제작 · 팀 1위</h3><p>보안 설정 오류와 Typosquatting 공급망 공격 문제를 제작했으며, ::6 팀으로 전체 10개 문제를 해결했습니다.</p></div></article></div>
+      <footer>상세 페이지 · /activities.html</footer>
+    </section>
+
+    <section class="sheet learning-page-print">
+      <header class="page-head"><span>09</span><div><p>교육 및 학습 기록</p><h2>배운 내용을 실습으로 확인했습니다.</h2></div></header>
+      <div class="learning-columns"><article><span>01</span><h3>네트워크·인프라</h3><p>Linux, Cisco, VLAN, Routing, ACL, VPN, NAT, Windows Server</p></article><article><span>02</span><h3>보안 운영·관제</h3><p>pfSense, Suricata, Snort, Wazuh, 로그 분석과 시스템 점검</p></article><article><span>03</span><h3>웹 취약점 실습</h3><p>DVWA, WebGoat, OWASP Juice Shop, Metasploit, WAF</p></article><article><span>04</span><h3>문제 해결 방식</h3><p>환경 구성 → 결과 확인 → 원인 분리 → 조치 → 같은 조건으로 재시험</p></article></div>
+      <div class="closing"><p class="eyebrow">PORTFOLIO LINKS</p><h3>상세 화면과 원본 자료는 웹 포트폴리오에서 확인할 수 있습니다.</h3><a href="https://njgnet.github.io/">https://njgnet.github.io/</a><a href="https://github.com/njgnet">https://github.com/njgnet</a></div>
+      <div class="note"><b>PDF 출력 안내</b><p>이 문서는 웹 포트폴리오의 주요 경험과 근거 자료를 A4에 맞게 재구성한 출력본입니다. 프로젝트 원본 보고서와 시연 영상은 각 상세 페이지의 링크에서 확인할 수 있습니다.</p></div>
+      <footer>남재근 · 보안 인프라 포트폴리오</footer>
+    </section>
+  </main>
+</body>
+</html>

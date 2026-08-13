@@ -85,7 +85,7 @@
           <article><span>06</span><div><b>CSRF</b><p>세션별 토큰을 생성해 상태 변경 요청에서 검증하고 실패 이벤트를 Wazuh로 전달했습니다.</p></div></article>
           <article><span>07</span><div><b>Brute Force</b><p>Suricata와 Wazuh에서 반복 로그인 시도를 탐지했습니다. 계정 잠금과 Rate Limiting은 잔여 보완 항목으로 남겼습니다.</p></div></article>
         </div>
-        <figure class="wide-proof cropped-proof"><div class="proof-crop"><img src="assets/images/project-03/sqli-result.png" alt="SQL Injection 탐지 및 제한 검증 결과"></div><p class="proof-summary"><b>검증 결과</b><span>조작된 로그인 요청에 Forbidden 응답이 반환되어 인증 우회와 보호 자원 접근이 제한되는 것을 확인했습니다.</span></p><figcaption>발표자료 중 SQL Injection 조치·탐지·관제 결과 정리 화면</figcaption></figure>
+        <figure class="wide-proof"><img src="assets/images/project-03/sqli-result.png?v=2" alt="SQL Injection 탐지 및 제한 검증 결과"><figcaption>발표자료 중 SQL Injection 조치·탐지·관제 결과 정리 화면</figcaption></figure>
       </div>
     </section>
 
@@ -110,7 +110,7 @@
         <p>테스트 파일은 실제 피해를 일으키는 악성코드가 아니라 탐지와 자동 대응을 검증하기 위해 위험 패턴을 넣은 샘플입니다. ClamAV, YARA, capa, oletools를 조합해 파일 유형과 내부 행위를 분석했습니다.</p>
         <p>검증 사례에서는 EICAR 시그니처와 capa 기능 패턴을 확인해 위험도 95점, MALICIOUS로 판정했습니다. 이후 사용자 영역에서 파일을 제거하고 관리자 격리 구역으로 이동했으며, 사건 번호와 분석 로그를 Wazuh로 전송했습니다.</p>
         <div class="malware-evidence">
-          <figure class="malware-flow-proof"><div class="proof-crop"><img src="assets/images/project-03/malware-flow.png" alt="악성 파일 자동 대응 구조"></div><p class="proof-summary"><b>핵심</b><span>관리자에게 알림만 제공하는 구조가 아니라, 알림 발생과 동시에 파일 노출을 차단하고 격리까지 자동으로 수행합니다.</span></p><figcaption>업로드 → 탐지 → 관리자 알림 → 자동 격리</figcaption></figure>
+          <figure><img src="assets/images/project-03/malware-flow.png?v=2" alt="악성 파일 자동 대응 구조"><figcaption>업로드 → 탐지 → 관리자 알림 → 자동 격리</figcaption></figure>
           <figure><img src="assets/images/project-03/malware-result.png" alt="EICAR 악성코드 분석 결과"><figcaption>ClamAV·YARA·capa·oletools 분석 결과 화면</figcaption></figure>
         </div>
       </div>

@@ -1,0 +1,10 @@
+.learning p {
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+@media (max-width: 480px) {
+  .learning p {
+    font-size: 17px;
+  }
+}
